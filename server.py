@@ -26,10 +26,17 @@ from fastapi.responses import JSONResponse, StreamingResponse
 
 from vision_pipeline import (
     BlackBeamDetector, BeamTracker, DetectorConfig,
-    CameraIntrinsics, project_to_3d, Detection,
+    CameraIntrinsics, project_to_3d, estimate_depth_from_size, Detection,
 )
 
 app = FastAPI()
+
+# Measure your actual object's longest side in cm and set this accurately —
+# it's what the camera-only depth estimate is calibrated against. If you
+# later add a real depth sensor (VL53L0X via a relay MCU, etc.), send a
+# real depth_cm > 0 in the request and it will be trusted over this
+# estimate automatically — no other code changes needed.
+OBJECT_SIZE_CM = 5.0
 
 _config = DetectorConfig()
 _detector = BlackBeamDetector(_config)
@@ -51,7 +58,7 @@ except Exception:
 
 
 @app.post("/ingest")
-async def ingest(frame: UploadFile, depth_cm: float = Form(...)):
+async def ingest(frame: UploadFile, depth_cm: float = Form(-1.0)):
     global _intrinsics
 
     raw = await frame.read()
@@ -68,22 +75,28 @@ async def ingest(frame: UploadFile, depth_cm: float = Form(...)):
     result = {"timestamp": time.time(), "found": det is not None}
 
     display = img.copy()
-    if det is not None and depth_cm > 0:
-        pos = project_to_3d(det.pixel_x, det.pixel_y, depth_cm, _intrinsics)
+    if det is not None:
+        # A real sensor reading (> 0) is trusted; otherwise fall back to
+        # the camera-only known-size estimate. This is what lets you plug
+        # a real depth sensor back in later with zero code changes here.
+        used_real_sensor = depth_cm > 0
+        z_cm = depth_cm if used_real_sensor else estimate_depth_from_size(det, _intrinsics, OBJECT_SIZE_CM)
+
+        pos = project_to_3d(det.pixel_x, det.pixel_y, z_cm, _intrinsics)
         result.update({
             "pixel_x": det.pixel_x, "pixel_y": det.pixel_y,
             "angle_deg": det.angle_deg,
             "x_cm": pos.x_cm, "y_cm": pos.y_cm, "z_cm": pos.z_cm,
+            "z_source": "sensor" if used_real_sensor else "estimated_from_size",
         })
         box = det.box.astype(int)
         cv2.drawContours(display, [box], 0, (0, 255, 0), 2)
         cv2.circle(display, (int(det.pixel_x), int(det.pixel_y)), 5, (0, 0, 255), -1)
-        label = f"X={pos.x_cm:.1f} Y={pos.y_cm:.1f} Z={pos.z_cm:.1f}cm"
+        label = f"X={pos.x_cm:.1f} Y={pos.y_cm:.1f} Z~{pos.z_cm:.1f}cm"
         cv2.putText(display, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
     else:
-        note = "no beam detected" if det is None else "invalid depth reading"
         result["found"] = False
-        cv2.putText(display, note, (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        cv2.putText(display, "no object detected", (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
     ok, jpeg = cv2.imencode(".jpg", display)
     with _lock:
