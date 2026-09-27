@@ -1,10 +1,18 @@
 # Rover Vision — color object tracking, from scratch
 
-Pipeline: ESP32-S3 + OV2640 captures frames -> ESP32 also reads a VL53L0X
-depth sensor -> both get POSTed to a FastAPI backend (deployed on Render)
--> backend detects the tracked object (currently tuned for blue), tracks
-it, and back-projects pixel position + depth into a real-world (X, Y, Z)
-in centimeters, camera-frame.
+Pipeline: ESP32-S3 + OV2640 captures frames -> POSTed to a FastAPI backend
+(deployed on Render) -> backend detects the tracked object (currently
+tuned for blue), tracks it, and estimates its 3D position (X, Y, Z) in
+centimeters, camera-frame.
+
+Z is currently estimated from the camera alone (known-size method: the
+object's real-world size vs. how large it appears in pixels) rather than
+a physical depth sensor — the VL53L0X added noticeable lag when polled
+directly from the ESP32's main loop, so it's deferred to a future
+upgrade (e.g. a second MCU relaying real depth readings). The system is
+built so a real sensor reading can be added back later with zero code
+changes: send a real `depth_cm > 0` to the backend and it's trusted
+automatically over the estimate.
 
 Arm/car IK is intentionally out of scope for this stage — this gets you a
 working, testable 3D position feed first.
@@ -156,13 +164,16 @@ the local setup — don't swap it back to plain `opencv-python-headless`.
 1. Open `esp32_cam_client/esp32_cam_client.ino` in Arduino IDE.
 2. Fill in `WIFI_SSID`, `WIFI_PASS`, and `BACKEND_URL` (your Render URL +
    `/ingest`).
-3. Wire the VL53L0X over I2C (see wiring comment in the sketch), adjust
-   the `Wire.begin(SDA, SCL)` pins to match whatever's free on your board.
-4. Flash it, open Serial Monitor at 115200 baud, confirm WiFi connects
+3. Flash it, open Serial Monitor at 115200 baud, confirm WiFi connects
    and you see `POST -> 200` messages.
+4. In `server.py`, measure your tracked object's actual longest side in
+   centimeters and set `OBJECT_SIZE_CM` accurately — this is what the
+   Z estimate is calibrated against. Redeploy to Render after changing it.
 5. Watch `https://your-app.onrender.com/debug_feed` in a browser — you
    should see your live rig's view with the object boxed and its
-   (X,Y,Z) printed on-frame.
+   (X,Y,Z) printed on-frame. Z here is an estimate from apparent size,
+   not a real depth sensor reading — see the note at the top of this
+   README.
 
 ## Known rough edges to expect
 
