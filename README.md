@@ -35,8 +35,12 @@ Python isn't available.
   also against the live stream.
 - `server.py` — FastAPI backend, deploy this to Render once you're
   ready to go live with depth fusion.
-- `esp32_cam_client/esp32_cam_client.ino` — ESP32 firmware for the final
-  live system: POSTs frames + depth to your Render backend.
+- `esp32_cam_client/esp32_cam_ws_client.ino` — ESP32 firmware for the
+  final live system: streams frames to the backend over a persistent
+  WebSocket (fast). **Use this one.**
+- `esp32_cam_client/esp32_cam_client.ino` — older HTTP-POST-per-frame
+  version, kept as a fallback only. Slow over the internet (full HTTPS
+  handshake + round trip on every frame).
 - `esp32_cam_client/esp32_snapshot_server.ino` — optional single-photo
   sketch, useful for grabbing stills for the Colab fallback notebook.
 - `requirements-local.txt` — deps for running the pipeline on your own
@@ -161,19 +165,32 @@ the local setup — don't swap it back to plain `opencv-python-headless`.
 
 ## Step 6 — Flash the final ESP32 firmware and go live
 
-1. Open `esp32_cam_client/esp32_cam_client.ino` in Arduino IDE.
-2. Fill in `WIFI_SSID`, `WIFI_PASS`, and `BACKEND_URL` (your Render URL +
-   `/ingest`).
-3. Flash it, open Serial Monitor at 115200 baud, confirm WiFi connects
-   and you see `POST -> 200` messages.
+1. In Arduino IDE: Tools -> Manage Libraries -> install
+   **ArduinoWebsockets** by Gil Maimon.
+2. Open `esp32_cam_client/esp32_cam_ws_client.ino`, fill in `WIFI_SSID`,
+   `WIFI_PASS`, and `WS_URL` (`wss://<your-app>.onrender.com/ws`).
+3. Flash it, open Serial Monitor at 115200 baud. You should see
+   `WebSocket connected`, then a line like `~14.0 fps` every 2 seconds —
+   that's your real measured frame rate.
 4. In `server.py`, measure your tracked object's actual longest side in
    centimeters and set `OBJECT_SIZE_CM` accurately — this is what the
    Z estimate is calibrated against. Redeploy to Render after changing it.
 5. Watch `https://your-app.onrender.com/debug_feed` in a browser — you
    should see your live rig's view with the object boxed and its
    (X,Y,Z) printed on-frame. Z here is an estimate from apparent size,
-   not a real depth sensor reading — see the note at the top of this
-   README.
+   not a real depth sensor reading — see the note at the top.
+
+**Why a WebSocket instead of HTTP POST:** HTTP paid a full HTTPS
+handshake and a round trip to the server on every single frame, capping
+the rate at a few fps regardless of how fast the server was. The
+WebSocket connects once and streams frames continuously. The sketch also
+disables WiFi modem sleep and forces the camera to always send its
+newest frame (not a stale buffered one), both of which reduce lag.
+
+If it's still not fast enough, the remaining lever is distance: run
+`server.py` on your own PC (same WiFi as the ESP32) and use
+`ws://<pc-ip>:8000/ws` as `WS_URL`, which removes the internet round
+trip entirely.
 
 ## Known rough edges to expect
 
