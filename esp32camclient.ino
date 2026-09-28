@@ -1,25 +1,38 @@
 /*
-  esp32_cam_client.ino
-  ESP32-S3 N16R8 + OV2640 -> POSTs a JPEG frame to the CV backend on
-  every loop. No depth sensor in this version — the backend estimates
-  Z from the object's known real-world size instead (see OBJECT_SIZE_CM
-  in server.py). A real depth sensor (VL53L0X, etc.) can be added back
-  later via a relay MCU without any changes here or in server.py — just
-  start sending a real depth_cm > 0 and it will be trusted automatically.
+  esp32_cam_ws_client.ino
+  ESP32-S3 N16R8 + OV2640 -> streams JPEG frames to the backend over ONE
+  persistent WebSocket. Replaces esp32_cam_client.ino (HTTP POST per
+  frame), which paid a full HTTPS handshake + round trip on every frame
+  and was capped at a few fps no matter how fast the server was.
+
+  Why this is faster:
+    - connect once, then just push frames — no per-frame handshake
+    - no multipart body building / extra memory copy (raw JPEG bytes)
+    - no delay() between frames
+    - WiFi modem sleep disabled (a common source of latency spikes)
+    - camera set to always hand over the LATEST frame, not a stale one
+
+  Required library (Arduino IDE -> Tools -> Manage Libraries):
+    "ArduinoWebsockets" by Gil Maimon
+
+  Prints measured frames-per-second to Serial Monitor every 2 seconds
+  so you can see the real number instead of guessing.
 */
 
 #include "esp_camera.h"
 #include <WiFi.h>
-#include <HTTPClient.h>
+#include <ArduinoWebsockets.h>
+
+using namespace websockets;
 
 // ---- fill these in ----
-const char* WIFI_SSID   = "xxxx";
-const char* WIFI_PASS   = "xxxx";
-const char* BACKEND_URL = "https://bxxxx/ingest";
+const char* WIFI_SSID = "YOUR_WIFI_SSID";
+const char* WIFI_PASS = "YOUR_WIFI_PASSWORD";
+// wss:// (secure) for Render. For a server on your own PC use ws://<pc-ip>:8000/ws
+const char* WS_URL    = "wss://bluephilic.onrender.com/ws";
 // ------------------------
 
-// Common AI-Thinker-style camera pin map — verify against YOUR specific
-// N16R8 dev board's schematic/silkscreen before flashing.
+// Common AI-Thinker-style camera pin map — same as the other sketches.
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
 #define XCLK_GPIO_NUM      15
@@ -36,6 +49,24 @@ const char* BACKEND_URL = "https://bxxxx/ingest";
 #define VSYNC_GPIO_NUM     6
 #define HREF_GPIO_NUM      7
 #define PCLK_GPIO_NUM      13
+
+WebsocketsClient wsClient;
+unsigned long lastReconnectAttempt = 0;
+unsigned long frameCount = 0;
+unsigned long lastFpsReport = 0;
+
+// The server replies to every frame with a small JSON result. Ignored
+// for now — later this is where the car/arm controller would read
+// x_cm / y_cm / z_cm. poll() must still run so replies are drained.
+void onWsMessage(WebsocketsMessage message) {}
+
+void onWsEvent(WebsocketsEvent event, String data) {
+  if (event == WebsocketsEvent::ConnectionOpened) {
+    Serial.println("WebSocket connected");
+  } else if (event == WebsocketsEvent::ConnectionClosed) {
+    Serial.println("WebSocket closed");
+  }
+}
 
 void setup_camera() {
   camera_config_t config;
@@ -60,11 +91,12 @@ void setup_camera() {
   config.xclk_freq_hz = 20000000;
   config.pixel_format  = PIXFORMAT_JPEG;
 
-  // QVGA keeps upload latency low over WiFi — that matters more than
-  // image quality for a moving "follow" target.
   config.frame_size   = FRAMESIZE_QVGA;  // 320x240
-  config.jpeg_quality = 12;              // lower = better quality, bigger file
-  config.fb_count      = 2;
+  config.jpeg_quality = 12;              // higher number = smaller/faster, blurrier
+  config.fb_count     = 2;
+  // Always return the newest frame instead of an older buffered one —
+  // otherwise what you see can be several frames behind reality.
+  config.grab_mode    = CAMERA_GRAB_LATEST;
 
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
@@ -78,6 +110,8 @@ void setup() {
 
   setup_camera();
 
+  WiFi.mode(WIFI_STA);
+  WiFi.setSleep(false);  // disable modem sleep — big latency win
   WiFi.begin(WIFI_SSID, WIFI_PASS);
   Serial.print("Connecting to WiFi");
   while (WiFi.status() != WL_CONNECTED) {
@@ -85,53 +119,46 @@ void setup() {
     Serial.print(".");
   }
   Serial.println("\nConnected: " + WiFi.localIP().toString());
+
+  wsClient.setInsecure();  // skip TLS cert validation (fine for a hobby project)
+  wsClient.onMessage(onWsMessage);
+  wsClient.onEvent(onWsEvent);
 }
 
-void send_frame() {
+void loop() {
+  // (Re)connect if needed — Render can drop idle/cold connections.
+  if (!wsClient.available()) {
+    if (millis() - lastReconnectAttempt > 2000) {
+      lastReconnectAttempt = millis();
+      Serial.println("Connecting WebSocket...");
+      wsClient.connect(WS_URL);
+    }
+    delay(10);
+    return;
+  }
+
+  wsClient.poll();  // drain the server's replies / keep the connection alive
+
   camera_fb_t* fb = esp_camera_fb_get();
   if (!fb) {
     Serial.println("Camera capture failed");
     return;
   }
 
-  HTTPClient http;
-  http.begin(BACKEND_URL);
+  bool ok = wsClient.sendBinary((const char*)fb->buf, fb->len);
+  esp_camera_fb_return(fb);
 
-  String boundary = "----ESP32Boundary";
-  http.addHeader("Content-Type", "multipart/form-data; boundary=" + boundary);
-
-  // No depth_cm field at all — server.py defaults it to -1 and falls
-  // back to the camera-only size estimate automatically.
-  String head = "--" + boundary + "\r\n"
-    "Content-Disposition: form-data; name=\"frame\"; filename=\"frame.jpg\"\r\n"
-    "Content-Type: image/jpeg\r\n\r\n";
-  String tail = "\r\n--" + boundary + "--\r\n";
-
-  size_t total_len = head.length() + fb->len + tail.length();
-  uint8_t* body = (uint8_t*)malloc(total_len);
-  if (!body) {
-    Serial.println("malloc failed for request body");
-    esp_camera_fb_return(fb);
-    http.end();
+  if (!ok) {
+    Serial.println("Send failed — reconnecting");
+    wsClient.close();
     return;
   }
-  memcpy(body, head.c_str(), head.length());
-  memcpy(body + head.length(), fb->buf, fb->len);
-  memcpy(body + head.length() + fb->len, tail.c_str(), tail.length());
 
-  int status = http.POST(body, total_len);
-  if (status > 0) {
-    Serial.printf("POST -> %d\n", status);
-  } else {
-    Serial.printf("POST failed: %s\n", http.errorToString(status).c_str());
+  frameCount++;
+  unsigned long now = millis();
+  if (now - lastFpsReport >= 2000) {
+    Serial.printf("~%.1f fps\n", frameCount * 1000.0 / (now - lastFpsReport));
+    frameCount = 0;
+    lastFpsReport = now;
   }
-
-  free(body);
-  http.end();
-  esp_camera_fb_return(fb);
-}
-
-void loop() {
-  send_frame();
-  delay(100);  // ~10 fps upload — raise the delay if Render/WiFi can't keep up
 }
