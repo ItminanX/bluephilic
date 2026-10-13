@@ -1,0 +1,750 @@
+{"timestamp": 1790000000.0, "found": true, "pixel_x": 198.2, "pixel_y": 90.7, "x_cm": 6.228656489434432, "y_cm": -3.1353707646491213, "z_cm": 30.571376834534544, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.0333333, "found": true, "pixel_x": 196.3, "pixel_y": 91.2, "x_cm": 5.562738993505331, "y_cm": -2.8696795073168557, "z_cm": 28.644806156949922, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.0666666, "found": true, "pixel_x": 196.8, "pixel_y": 91.8, "x_cm": 5.802564756953314, "y_cm": -2.8616271989113296, "z_cm": 29.463246526712467, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.1, "found": true, "pixel_x": 196.4, "pixel_y": 91.0, "x_cm": 5.679165759128915, "y_cm": -2.941481128026367, "z_cm": 29.176350365533462, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.1333334, "found": true, "pixel_x": 197.1, "pixel_y": 88.2, "x_cm": 6.131376126268661, "y_cm": -3.5316344168151184, "z_cm": 30.94356399219173, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.1666667, "found": false}
+{"timestamp": 1790000000.2, "found": false}
+{"timestamp": 1790000000.2333333, "found": true, "pixel_x": 198.2, "pixel_y": 91.3, "x_cm": 6.09317648282033, "y_cm": -2.978492045213259, "z_cm": 29.936282372371746, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.2666667, "found": true, "pixel_x": 197.0, "pixel_y": 91.0, "x_cm": 5.861874470359796, "y_cm": -2.9956406402873244, "z_cm": 29.67325943931077, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.3, "found": true, "pixel_x": 197.1, "pixel_y": 89.6, "x_cm": 6.038191654990826, "y_cm": -3.2804422005849405, "z_cm": 30.49620847270068, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.3333333, "found": false}
+{"timestamp": 1790000000.3666666, "found": true, "pixel_x": 197.7, "pixel_y": 92.4, "x_cm": 6.097316306354741, "y_cm": -2.857022778883914, "z_cm": 30.291016155045522, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.4, "found": true, "pixel_x": 197.9, "pixel_y": 91.2, "x_cm": 6.2490973307068876, "y_cm": -3.093085383115446, "z_cm": 30.882794321505358, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.4333334, "found": true, "pixel_x": 199.8, "pixel_y": 88.8, "x_cm": 6.144190468311353, "y_cm": -3.2411618773667663, "z_cm": 29.039251853656683, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.4666667, "found": true, "pixel_x": 196.8, "pixel_y": 94.1, "x_cm": 5.730491638431203, "y_cm": -2.5154520236539186, "z_cm": 29.12024803036065, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.5, "found": false}
+{"timestamp": 1790000000.5333333, "found": true, "pixel_x": 198.6, "pixel_y": 90.8, "x_cm": 6.0065543635855505, "y_cm": -2.975646845788092, "z_cm": 29.18675801768836, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.5666666, "found": true, "pixel_x": 198.8, "pixel_y": 93.2, "x_cm": 6.271343894349547, "y_cm": -2.7451894915243815, "z_cm": 30.374550543221726, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.6, "found": true, "pixel_x": 197.1, "pixel_y": 91.3, "x_cm": 6.110987956615507, "y_cm": -3.0755940153658483, "z_cm": 30.847223800718478, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.6333334, "found": false}
+{"timestamp": 1790000000.6666667, "found": true, "pixel_x": 199.1, "pixel_y": 92.8, "x_cm": 6.448502865335445, "y_cm": -2.8641368413142527, "z_cm": 30.975693587514563, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.7, "found": true, "pixel_x": 198.7, "pixel_y": 88.1, "x_cm": 6.227136041602603, "y_cm": -3.4643424523076805, "z_cm": 30.182431901303925, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.7333333, "found": false}
+{"timestamp": 1790000000.7666667, "found": true, "pixel_x": 198.8, "pixel_y": 90.6, "x_cm": 6.219113080414551, "y_cm": -3.0981512857294007, "z_cm": 30.097687141218753, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.8, "found": false}
+{"timestamp": 1790000000.8333333, "found": false}
+{"timestamp": 1790000000.8666666, "found": true, "pixel_x": 197.3, "pixel_y": 91.6, "x_cm": 5.9542408043250665, "y_cm": -2.9310694752131137, "z_cm": 29.877923204069354, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.9, "found": true, "pixel_x": 196.1, "pixel_y": 91.1, "x_cm": 5.830612317831336, "y_cm": -3.0373344290812927, "z_cm": 30.164843689685547, "z_source": "estimated_from_size"}
+{"timestamp": 1790000000.9333334, "found": false}
+{"timestamp": 1790000000.9666667, "found": false}
+{"timestamp": 1790000001.0, "found": true, "pixel_x": 198.8, "pixel_y": 90.6, "x_cm": 5.9629773994800415, "y_cm": -2.975389891677796, "z_cm": 28.879839355954147, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.0333333, "found": true, "pixel_x": 198.6, "pixel_y": 89.1, "x_cm": 6.066712702119896, "y_cm": -3.235746473456275, "z_cm": 29.471987271660268, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.0666666, "found": false}
+{"timestamp": 1790000001.1, "found": true, "pixel_x": 197.3, "pixel_y": 89.7, "x_cm": 5.904511570799763, "y_cm": -3.1706237914050086, "z_cm": 29.629261615408666, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.1333334, "found": true, "pixel_x": 196.5, "pixel_y": 90.1, "x_cm": 5.7819785396897485, "y_cm": -3.1087082396087444, "z_cm": 29.59350413889915, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.1666667, "found": true, "pixel_x": 197.5, "pixel_y": 90.8, "x_cm": 5.840690146415803, "y_cm": -2.9775308379028247, "z_cm": 29.17034093913296, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.2, "found": false}
+{"timestamp": 1790000001.2333333, "found": true, "pixel_x": 197.7, "pixel_y": 91.1, "x_cm": 6.17370562677683, "y_cm": -3.083326457778834, "z_cm": 30.723187802579307, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.2666667, "found": false}
+{"timestamp": 1790000001.3, "found": true, "pixel_x": 199.2, "pixel_y": 91.4, "x_cm": 6.197804440558422, "y_cm": -2.946795952765591, "z_cm": 29.6941165521234, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.3333333, "found": true, "pixel_x": 197.6, "pixel_y": 88.1, "x_cm": 6.179147443633418, "y_cm": -3.535815261641538, "z_cm": 30.79496117275544, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.3666666, "found": false}
+{"timestamp": 1790000001.4, "found": true, "pixel_x": 199.0, "pixel_y": 88.5, "x_cm": 6.051963267482662, "y_cm": -3.291929810340109, "z_cm": 29.12486604464175, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.4333334, "found": true, "pixel_x": 198.9, "pixel_y": 91.3, "x_cm": 6.463176480054509, "y_cm": -3.1078426660475946, "z_cm": 31.178858499467392, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.4666667, "found": true, "pixel_x": 199.9, "pixel_y": 91.0, "x_cm": 6.368693725706201, "y_cm": -3.0336688975436363, "z_cm": 30.0133586109133, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.5, "found": true, "pixel_x": 196.3, "pixel_y": 92.7, "x_cm": 5.878974423854309, "y_cm": -2.807461879369119, "z_cm": 30.25422469469106, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.5333333, "found": true, "pixel_x": 196.6, "pixel_y": 90.1, "x_cm": 6.05236631530056, "y_cm": -3.249825131294951, "z_cm": 30.93241357163084, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.5666666, "found": true, "pixel_x": 197.5, "pixel_y": 92.5, "x_cm": 5.963735699656497, "y_cm": -2.7897118499306894, "z_cm": 29.760335207538667, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.6, "found": true, "pixel_x": 197.3, "pixel_y": 90.2, "x_cm": 5.926676654541268, "y_cm": -3.1132377737514743, "z_cm": 29.76502243568803, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.6333334, "found": true, "pixel_x": 197.3, "pixel_y": 89.0, "x_cm": 6.0779399928750735, "y_cm": -3.3670128092956704, "z_cm": 30.49438219422672, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.6666667, "found": false}
+{"timestamp": 1790000001.7, "found": true, "pixel_x": 196.2, "pixel_y": 91.6, "x_cm": 5.53901567680112, "y_cm": -2.8078893225123758, "z_cm": 28.59064652168024, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.7333333, "found": true, "pixel_x": 197.5, "pixel_y": 90.1, "x_cm": 6.278724503489021, "y_cm": -3.299789615419525, "z_cm": 31.395275916093055, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.7666667, "found": true, "pixel_x": 197.7, "pixel_y": 91.2, "x_cm": 6.130245793672682, "y_cm": -3.047524309028094, "z_cm": 30.444452256127967, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.8, "found": false}
+{"timestamp": 1790000001.8333333, "found": true, "pixel_x": 197.6, "pixel_y": 89.4, "x_cm": 6.1895346400605264, "y_cm": -3.3496112028790788, "z_cm": 30.87437555212548, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.8666666, "found": false}
+{"timestamp": 1790000001.9, "found": true, "pixel_x": 198.2, "pixel_y": 91.0, "x_cm": 6.143807280000001, "y_cm": -3.041891656859066, "z_cm": 30.16265787358974, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.9333334, "found": true, "pixel_x": 198.7, "pixel_y": 90.6, "x_cm": 6.166166576292231, "y_cm": -3.072920788859227, "z_cm": 29.90495125200622, "z_source": "estimated_from_size"}
+{"timestamp": 1790000001.9666667, "found": true, "pixel_x": 199.5, "pixel_y": 92.1, "x_cm": 6.189545054685937, "y_cm": -2.8195652260812607, "z_cm": 29.441249903169794, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.0, "found": false}
+{"timestamp": 1790000002.0333333, "found": true, "pixel_x": 199.2, "pixel_y": 92.5, "x_cm": 6.23485130012375, "y_cm": -2.802269065148307, "z_cm": 29.89548620252168, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.0666666, "found": true, "pixel_x": 198.9, "pixel_y": 92.3, "x_cm": 6.009505992955221, "y_cm": -2.7450722373062133, "z_cm": 28.987781206028675, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.1, "found": true, "pixel_x": 200.0, "pixel_y": 89.2, "x_cm": 6.1773153878562255, "y_cm": -3.178873464203633, "z_cm": 29.03730563412289, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.1333334, "found": false}
+{"timestamp": 1790000002.1666667, "found": true, "pixel_x": 200.6, "pixel_y": 93.3, "x_cm": 6.636927075967395, "y_cm": -2.774287203538129, "z_cm": 30.807844237474896, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.2, "found": true, "pixel_x": 199.0, "pixel_y": 89.6, "x_cm": 6.182136381331438, "y_cm": -3.2114347297702186, "z_cm": 29.78282602862312, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.2333333, "found": true, "pixel_x": 195.3, "pixel_y": 87.9, "x_cm": 5.595424996900988, "y_cm": -3.416116161839922, "z_cm": 29.547028932219785, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.2666667, "found": false}
+{"timestamp": 1790000002.3, "found": true, "pixel_x": 197.8, "pixel_y": 89.8, "x_cm": 6.28790500487016, "y_cm": -3.3253196061807246, "z_cm": 31.156497991643654, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.3333333, "found": true, "pixel_x": 196.3, "pixel_y": 88.6, "x_cm": 5.70137321002105, "y_cm": -3.294429718639766, "z_cm": 29.336412653769802, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.3666666, "found": true, "pixel_x": 198.4, "pixel_y": 89.6, "x_cm": 6.209495399878737, "y_cm": -3.267960318732215, "z_cm": 30.358542036104893, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.4, "found": true, "pixel_x": 196.4, "pixel_y": 91.4, "x_cm": 5.941339935430913, "y_cm": -3.023465144478099, "z_cm": 30.472506273780443, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.4333334, "found": false}
+{"timestamp": 1790000002.4666667, "found": true, "pixel_x": 200.8, "pixel_y": 89.0, "x_cm": 6.282180350951467, "y_cm": -3.206662503418699, "z_cm": 29.015553230145933, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.5, "found": true, "pixel_x": 197.7, "pixel_y": 88.9, "x_cm": 6.079048939492874, "y_cm": -3.3475760775469, "z_cm": 30.17975844812589, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.5333333, "found": false}
+{"timestamp": 1790000002.5666666, "found": true, "pixel_x": 197.9, "pixel_y": 90.6, "x_cm": 5.820536978438951, "y_cm": -2.956667012730866, "z_cm": 28.795821763942175, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.6, "found": true, "pixel_x": 194.5, "pixel_y": 90.0, "x_cm": 5.853838365777519, "y_cm": -3.334644066316458, "z_cm": 31.598554352718274, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.6333334, "found": false}
+{"timestamp": 1790000002.6666667, "found": true, "pixel_x": 197.0, "pixel_y": 93.1, "x_cm": 5.875136763705534, "y_cm": -2.7092078945346514, "z_cm": 29.73084596923788, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.7, "found": true, "pixel_x": 196.4, "pixel_y": 92.8, "x_cm": 5.766165183148447, "y_cm": -2.743234022178166, "z_cm": 29.634826262489195, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.7333333, "found": false}
+{"timestamp": 1790000002.7666667, "found": false}
+{"timestamp": 1790000002.8, "found": false}
+{"timestamp": 1790000002.8333333, "found": false}
+{"timestamp": 1790000002.8666666, "found": true, "pixel_x": 198.1, "pixel_y": 89.5, "x_cm": 5.958088859295736, "y_cm": -3.1686133030640606, "z_cm": 29.33180666175035, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.9, "found": true, "pixel_x": 199.4, "pixel_y": 89.2, "x_cm": 6.266192079675026, "y_cm": -3.2777252548119735, "z_cm": 29.89276519419718, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.9333334, "found": true, "pixel_x": 195.8, "pixel_y": 93.7, "x_cm": 5.47360186522738, "y_cm": -2.522546057145048, "z_cm": 28.547876744689287, "z_source": "estimated_from_size"}
+{"timestamp": 1790000002.9666667, "found": true, "pixel_x": 198.9, "pixel_y": 91.6, "x_cm": 6.682749306842405, "y_cm": -3.1574434253834003, "z_cm": 32.24645931343323, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.0, "found": false}
+{"timestamp": 1790000003.0333333, "found": true, "pixel_x": 197.9, "pixel_y": 89.5, "x_cm": 6.066299020586474, "y_cm": -3.2490588326491094, "z_cm": 30.009300021271592, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.0666666, "found": true, "pixel_x": 199.6, "pixel_y": 91.6, "x_cm": 6.26264803359604, "y_cm": -2.924998967587488, "z_cm": 29.776834746412245, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.1, "found": false}
+{"timestamp": 1790000003.1333334, "found": true, "pixel_x": 197.2, "pixel_y": 88.4, "x_cm": 5.653773157595433, "y_cm": -3.2311722078358156, "z_cm": 28.460778680910288, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.1666667, "found": true, "pixel_x": 199.1, "pixel_y": 92.1, "x_cm": 6.181903626499832, "y_cm": -2.8444984615131848, "z_cm": 29.676004010782584, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.2, "found": true, "pixel_x": 197.4, "pixel_y": 90.8, "x_cm": 5.935043541386868, "y_cm": -3.0336121387870825, "z_cm": 29.724585114343466, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.2333333, "found": true, "pixel_x": 198.6, "pixel_y": 91.0, "x_cm": 6.228319302337413, "y_cm": -3.0597667396486354, "z_cm": 30.287208563786663, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.2666667, "found": false}
+{"timestamp": 1790000003.3, "found": true, "pixel_x": 198.5, "pixel_y": 91.2, "x_cm": 6.174333337391018, "y_cm": -3.0116438690403564, "z_cm": 30.07769439780998, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.3333333, "found": true, "pixel_x": 197.7, "pixel_y": 92.4, "x_cm": 6.055062774096326, "y_cm": -2.8431075592847614, "z_cm": 30.119108578915796, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.3666666, "found": true, "pixel_x": 197.4, "pixel_y": 91.2, "x_cm": 6.243341999819702, "y_cm": -3.117964387686598, "z_cm": 31.232807526571833, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.4, "found": false}
+{"timestamp": 1790000003.4333334, "found": true, "pixel_x": 199.1, "pixel_y": 89.9, "x_cm": 6.091584324899304, "y_cm": -3.105888622249384, "z_cm": 29.27596636052367, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.4666667, "found": true, "pixel_x": 197.3, "pixel_y": 90.2, "x_cm": 5.897794616353009, "y_cm": -3.105266571774747, "z_cm": 29.605576182664482, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.5, "found": true, "pixel_x": 196.3, "pixel_y": 91.8, "x_cm": 5.458196802924498, "y_cm": -2.735837417262078, "z_cm": 28.108584708997164, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.5333333, "found": true, "pixel_x": 197.5, "pixel_y": 89.5, "x_cm": 5.900049272600039, "y_cm": -3.186744720961604, "z_cm": 29.49564135655031, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.5666666, "found": true, "pixel_x": 196.1, "pixel_y": 93.0, "x_cm": 5.913454949907593, "y_cm": -2.7987729766192806, "z_cm": 30.58508063906366, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.6, "found": false}
+{"timestamp": 1790000003.6333334, "found": true, "pixel_x": 198.2, "pixel_y": 91.9, "x_cm": 5.728735002981429, "y_cm": -2.7221244270190894, "z_cm": 28.157966470490493, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.6666667, "found": true, "pixel_x": 196.9, "pixel_y": 89.1, "x_cm": 5.862237356411098, "y_cm": -3.2778687011865144, "z_cm": 29.73556518201133, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.7, "found": false}
+{"timestamp": 1790000003.7333333, "found": false}
+{"timestamp": 1790000003.7666667, "found": true, "pixel_x": 196.5, "pixel_y": 90.3, "x_cm": 5.762193517012151, "y_cm": -3.075701260771263, "z_cm": 29.518670693643898, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.8, "found": true, "pixel_x": 198.1, "pixel_y": 91.5, "x_cm": 6.1007415926965365, "y_cm": -2.958454604690515, "z_cm": 30.03545722802302, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.8333333, "found": true, "pixel_x": 198.1, "pixel_y": 91.0, "x_cm": 5.957419546872245, "y_cm": -2.969220719301232, "z_cm": 29.3382462277963, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.8666666, "found": true, "pixel_x": 198.7, "pixel_y": 91.2, "x_cm": 6.449652940713466, "y_cm": -3.1389138814006294, "z_cm": 31.322636655679183, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.9, "found": true, "pixel_x": 194.9, "pixel_y": 89.0, "x_cm": 5.43494874210274, "y_cm": -3.213073259764152, "z_cm": 29.043197197841952, "z_source": "estimated_from_size"}
+{"timestamp": 1790000003.9333334, "found": false}
+{"timestamp": 1790000003.9666667, "found": true, "pixel_x": 195.2, "pixel_y": 90.5, "x_cm": 5.737788548133622, "y_cm": -3.136474384491824, "z_cm": 30.37734963800943, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.0, "found": true, "pixel_x": 201.2, "pixel_y": 91.4, "x_cm": 6.649312822052542, "y_cm": -3.0184682004783605, "z_cm": 30.469151792337087, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.0333333, "found": true, "pixel_x": 197.7, "pixel_y": 90.8, "x_cm": 6.197171976419094, "y_cm": -3.138897610960159, "z_cm": 30.813781850308597, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.0666666, "found": true, "pixel_x": 196.0, "pixel_y": 92.7, "x_cm": 5.5726906518867265, "y_cm": -2.6763454489649137, "z_cm": 28.8711854438156, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.1, "found": true, "pixel_x": 197.1, "pixel_y": 91.9, "x_cm": 5.918561099981948, "y_cm": -2.897623254693791, "z_cm": 29.887873816075885, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.1333334, "found": false}
+{"timestamp": 1790000004.1666667, "found": true, "pixel_x": 195.8, "pixel_y": 88.9, "x_cm": 5.5835745733125055, "y_cm": -3.2258415691737796, "z_cm": 29.09346563472432, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.2, "found": false}
+{"timestamp": 1790000004.2333333, "found": true, "pixel_x": 199.3, "pixel_y": 88.5, "x_cm": 6.367173644335765, "y_cm": -3.4415608911458646, "z_cm": 30.473564424287822, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.2666667, "found": true, "pixel_x": 198.4, "pixel_y": 90.5, "x_cm": 5.9078214845872, "y_cm": -2.9849828002502434, "z_cm": 28.898726392320263, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.3, "found": true, "pixel_x": 196.0, "pixel_y": 89.7, "x_cm": 5.6003598211410335, "y_cm": -3.118670793866272, "z_cm": 29.08415599295972, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.3333333, "found": true, "pixel_x": 194.9, "pixel_y": 93.1, "x_cm": 5.485495764508953, "y_cm": -2.66319717989863, "z_cm": 29.258243537796883, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.3666666, "found": false}
+{"timestamp": 1790000004.4, "found": true, "pixel_x": 197.3, "pixel_y": 89.4, "x_cm": 5.523459708377674, "y_cm": -3.009682364516412, "z_cm": 27.708096257737004, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.4333334, "found": false}
+{"timestamp": 1790000004.4666667, "found": true, "pixel_x": 196.8, "pixel_y": 91.3, "x_cm": 6.159735032774936, "y_cm": -3.113426869010062, "z_cm": 31.308356021019925, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.5, "found": true, "pixel_x": 199.2, "pixel_y": 89.2, "x_cm": 6.026893451909695, "y_cm": -3.160883134473788, "z_cm": 28.86331499320226, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.5333333, "found": true, "pixel_x": 196.2, "pixel_y": 90.3, "x_cm": 5.848950384189222, "y_cm": -3.1439253123422697, "z_cm": 30.178745142514643, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.5666666, "found": true, "pixel_x": 197.0, "pixel_y": 89.8, "x_cm": 5.935014071320787, "y_cm": -3.199124139732719, "z_cm": 30.040630782425442, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.6, "found": false}
+{"timestamp": 1790000004.6333334, "found": false}
+{"timestamp": 1790000004.6666667, "found": true, "pixel_x": 199.1, "pixel_y": 88.8, "x_cm": 6.1937770555467235, "y_cm": -3.31883848469094, "z_cm": 29.76891184556301, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.7, "found": true, "pixel_x": 196.3, "pixel_y": 92.4, "x_cm": 5.874195460460096, "y_cm": -2.858104707982226, "z_cm": 30.231924855205563, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.7333333, "found": true, "pixel_x": 196.6, "pixel_y": 91.7, "x_cm": 5.867428717081437, "y_cm": -2.9330681229565174, "z_cm": 29.971988372192648, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.7666667, "found": true, "pixel_x": 198.7, "pixel_y": 90.8, "x_cm": 6.022742411021843, "y_cm": -2.9754563633087585, "z_cm": 29.25386810664288, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.8, "found": true, "pixel_x": 196.1, "pixel_y": 90.9, "x_cm": 5.752121142561307, "y_cm": -3.0123545651426302, "z_cm": 29.726631575107636, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.8333333, "found": true, "pixel_x": 196.4, "pixel_y": 91.0, "x_cm": 6.109294477919872, "y_cm": -3.163603733451602, "z_cm": 31.357275028378865, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.8666666, "found": true, "pixel_x": 196.1, "pixel_y": 88.4, "x_cm": 5.7718852969276275, "y_cm": -3.3837154963206055, "z_cm": 29.823831654221955, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.9, "found": true, "pixel_x": 195.5, "pixel_y": 89.4, "x_cm": 5.79067754103089, "y_cm": -3.2976939983461144, "z_cm": 30.436194449202517, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.9333334, "found": true, "pixel_x": 198.3, "pixel_y": 89.9, "x_cm": 6.215217945038755, "y_cm": -3.2348239108016026, "z_cm": 30.416327958711044, "z_source": "estimated_from_size"}
+{"timestamp": 1790000004.9666667, "found": true, "pixel_x": 196.6, "pixel_y": 91.7, "x_cm": 6.004894638826749, "y_cm": -2.988942629792931, "z_cm": 30.646026306263614, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.0, "found": true, "pixel_x": 195.0, "pixel_y": 93.9, "x_cm": 5.648938876271088, "y_cm": -2.6259197077750094, "z_cm": 30.05458442727617, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.0333333, "found": true, "pixel_x": 197.7, "pixel_y": 91.3, "x_cm": 5.984432347390799, "y_cm": -2.9571508237649047, "z_cm": 29.728608806584905, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.0666666, "found": true, "pixel_x": 196.2, "pixel_y": 88.7, "x_cm": 5.947946985485642, "y_cm": -3.4269502546871324, "z_cm": 30.683653031194094, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.1, "found": false}
+{"timestamp": 1790000005.1333334, "found": true, "pixel_x": 199.0, "pixel_y": 89.6, "x_cm": 6.443714263259162, "y_cm": -3.335046264257728, "z_cm": 31.039134677226006, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.1666667, "found": true, "pixel_x": 199.9, "pixel_y": 86.9, "x_cm": 6.210309773523569, "y_cm": -3.5376785721385873, "z_cm": 29.318645912046794, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.2, "found": false}
+{"timestamp": 1790000005.2333333, "found": true, "pixel_x": 196.2, "pixel_y": 90.7, "x_cm": 6.029283229213681, "y_cm": -3.19717057230543, "z_cm": 31.149592130551717, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.2666667, "found": true, "pixel_x": 199.8, "pixel_y": 92.3, "x_cm": 6.380417891846574, "y_cm": -2.8552525279609653, "z_cm": 30.127279629832362, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.3, "found": true, "pixel_x": 194.9, "pixel_y": 90.5, "x_cm": 5.588040826022363, "y_cm": -3.08148924777191, "z_cm": 29.799016200399667, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.3333333, "found": true, "pixel_x": 197.6, "pixel_y": 89.4, "x_cm": 5.991004037285636, "y_cm": -3.2391822755688002, "z_cm": 29.83002324632479, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.3666666, "found": true, "pixel_x": 199.7, "pixel_y": 93.9, "x_cm": 6.30956858644765, "y_cm": -2.610556786879113, "z_cm": 29.892208305488133, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.4, "found": true, "pixel_x": 197.7, "pixel_y": 90.2, "x_cm": 6.119077461619329, "y_cm": -3.193616336596303, "z_cm": 30.435426085812566, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.4333334, "found": true, "pixel_x": 196.2, "pixel_y": 92.0, "x_cm": 5.787916385879496, "y_cm": -2.8757679933112885, "z_cm": 29.863092106226034, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.4666667, "found": true, "pixel_x": 197.5, "pixel_y": 90.0, "x_cm": 6.130340927975979, "y_cm": -3.239497242903514, "z_cm": 30.624344574564812, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.5, "found": true, "pixel_x": 196.9, "pixel_y": 91.4, "x_cm": 5.879924255294453, "y_cm": -2.946191524395645, "z_cm": 29.775852521420774, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.5333333, "found": true, "pixel_x": 197.9, "pixel_y": 89.1, "x_cm": 6.1256571350099795, "y_cm": -3.34014445893077, "z_cm": 30.32079523002246, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.5666666, "found": false}
+{"timestamp": 1790000005.6, "found": true, "pixel_x": 197.9, "pixel_y": 91.3, "x_cm": 6.048212688244051, "y_cm": -2.977179337484396, "z_cm": 29.910756147641063, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.6333334, "found": false}
+{"timestamp": 1790000005.6666667, "found": true, "pixel_x": 196.3, "pixel_y": 90.7, "x_cm": 5.8803693656721325, "y_cm": -3.102788923957208, "z_cm": 30.263001179469963, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.7, "found": false}
+{"timestamp": 1790000005.7333333, "found": true, "pixel_x": 198.1, "pixel_y": 91.3, "x_cm": 6.07713764311097, "y_cm": -2.97738538083853, "z_cm": 29.896239319205815, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.7666667, "found": true, "pixel_x": 198.6, "pixel_y": 88.6, "x_cm": 6.039972657065814, "y_cm": -3.3031587049055253, "z_cm": 29.37484965746581, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.8, "found": true, "pixel_x": 198.2, "pixel_y": 91.7, "x_cm": 6.181025217322104, "y_cm": -2.971192360115178, "z_cm": 30.35453025984826, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.8333333, "found": true, "pixel_x": 198.7, "pixel_y": 91.7, "x_cm": 6.103242389933377, "y_cm": -2.886629261550841, "z_cm": 29.592373775835483, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.8666666, "found": true, "pixel_x": 198.6, "pixel_y": 92.8, "x_cm": 5.94228800573128, "y_cm": -2.6685916680393817, "z_cm": 28.914802019373397, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.9, "found": true, "pixel_x": 195.4, "pixel_y": 92.5, "x_cm": 5.681552740312446, "y_cm": -2.8078932918940587, "z_cm": 29.901257173339467, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.9333334, "found": true, "pixel_x": 198.3, "pixel_y": 88.8, "x_cm": 6.3237763028425, "y_cm": -3.4423346886470374, "z_cm": 30.950083608500538, "z_source": "estimated_from_size"}
+{"timestamp": 1790000005.9666667, "found": true, "pixel_x": 199.7, "pixel_y": 90.5, "x_cm": 6.2306587739655575, "y_cm": -3.0495986450968178, "z_cm": 29.536965372728783, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.0, "found": true, "pixel_x": 200.2, "pixel_y": 90.9, "x_cm": 6.396374903942818, "y_cm": -3.0387704640765527, "z_cm": 29.984607386378194, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.0333333, "found": true, "pixel_x": 196.7, "pixel_y": 91.7, "x_cm": 5.7799185171182605, "y_cm": -2.8718985933757293, "z_cm": 29.430029975392383, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.0666666, "found": true, "pixel_x": 199.3, "pixel_y": 89.9, "x_cm": 6.2293185422260535, "y_cm": -3.164094739521577, "z_cm": 29.821077286625535, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.1, "found": false}
+{"timestamp": 1790000006.1333334, "found": true, "pixel_x": 199.4, "pixel_y": 91.7, "x_cm": 6.292997452564934, "y_cm": -2.937957206430633, "z_cm": 30.044916515651323, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.1666667, "found": true, "pixel_x": 196.3, "pixel_y": 88.6, "x_cm": 5.682342970730996, "y_cm": -3.2864602715307716, "z_cm": 29.27290262615488, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.2, "found": false}
+{"timestamp": 1790000006.2333333, "found": true, "pixel_x": 195.2, "pixel_y": 90.5, "x_cm": 5.727024540204902, "y_cm": -3.1277361800301233, "z_cm": 30.305733605160242, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.2666667, "found": true, "pixel_x": 194.4, "pixel_y": 90.6, "x_cm": 5.362160268279903, "y_cm": -2.987537233485163, "z_cm": 29.00774912636391, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.3, "found": true, "pixel_x": 196.9, "pixel_y": 91.1, "x_cm": 5.7401199102793, "y_cm": -2.9333075151205454, "z_cm": 29.12481453224904, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.3333333, "found": false}
+{"timestamp": 1790000006.3666666, "found": true, "pixel_x": 198.6, "pixel_y": 92.1, "x_cm": 5.828566882357373, "y_cm": -2.715307362588301, "z_cm": 28.3560199157054, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.4, "found": false}
+{"timestamp": 1790000006.4333334, "found": true, "pixel_x": 198.2, "pixel_y": 92.3, "x_cm": 6.164106701604683, "y_cm": -2.8742149769937906, "z_cm": 30.251007037537036, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.4666667, "found": true, "pixel_x": 199.1, "pixel_y": 94.0, "x_cm": 6.2286869232186755, "y_cm": -2.5929739902522355, "z_cm": 29.91185298723907, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.5, "found": true, "pixel_x": 198.1, "pixel_y": 93.1, "x_cm": 6.049090567620538, "y_cm": -2.7133288963913555, "z_cm": 29.798499578472157, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.5333333, "found": true, "pixel_x": 196.3, "pixel_y": 90.8, "x_cm": 5.8210037914914405, "y_cm": -3.0524900881558463, "z_cm": 29.946214549606164, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.5666666, "found": true, "pixel_x": 199.3, "pixel_y": 88.8, "x_cm": 6.402192169400638, "y_cm": -3.4064886500928275, "z_cm": 30.593999107908573, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.6, "found": true, "pixel_x": 196.8, "pixel_y": 88.8, "x_cm": 5.681711540533641, "y_cm": -3.2195437131534623, "z_cm": 28.891068278421287, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.6333334, "found": true, "pixel_x": 198.5, "pixel_y": 90.4, "x_cm": 5.92946839840811, "y_cm": -3.005222514394535, "z_cm": 28.898924701947713, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.6666667, "found": true, "pixel_x": 199.4, "pixel_y": 89.7, "x_cm": 6.401993165656659, "y_cm": -3.2703969788255876, "z_cm": 30.537811681601184, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.7, "found": false}
+{"timestamp": 1790000006.7333333, "found": true, "pixel_x": 198.8, "pixel_y": 91.5, "x_cm": 6.320006698503206, "y_cm": -3.0221616413525587, "z_cm": 30.601250239780764, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.7666667, "found": true, "pixel_x": 197.2, "pixel_y": 92.5, "x_cm": 6.034725188487654, "y_cm": -2.854422837266942, "z_cm": 30.335377081636196, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.8, "found": false}
+{"timestamp": 1790000006.8333333, "found": true, "pixel_x": 201.1, "pixel_y": 94.1, "x_cm": 6.480923349347869, "y_cm": -2.5672819843240906, "z_cm": 29.716815208635538, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.8666666, "found": true, "pixel_x": 200.1, "pixel_y": 90.9, "x_cm": 6.5247191914752465, "y_cm": -3.1108632688139832, "z_cm": 30.650624680129773, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.9, "found": true, "pixel_x": 198.4, "pixel_y": 89.8, "x_cm": 6.409215733165018, "y_cm": -3.33195844050258, "z_cm": 31.28409054965328, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.9333334, "found": true, "pixel_x": 198.8, "pixel_y": 89.9, "x_cm": 6.172147058343349, "y_cm": -3.1690744133082362, "z_cm": 29.89604915766292, "z_source": "estimated_from_size"}
+{"timestamp": 1790000006.9666667, "found": false}
+{"timestamp": 1790000007.0, "found": false}
+{"timestamp": 1790000007.0333333, "found": true, "pixel_x": 198.5, "pixel_y": 89.7, "x_cm": 6.175405055373369, "y_cm": -3.217982272115987, "z_cm": 30.09155824549781, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.0666666, "found": true, "pixel_x": 199.5, "pixel_y": 91.0, "x_cm": 6.3878831891451044, "y_cm": -3.067660460896563, "z_cm": 30.432570372392657, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.1, "found": true, "pixel_x": 197.4, "pixel_y": 92.1, "x_cm": 6.243686533328, "y_cm": -2.9869380694799075, "z_cm": 31.23533332134679, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.1333334, "found": true, "pixel_x": 197.2, "pixel_y": 94.9, "x_cm": 5.7552481052169, "y_cm": -2.392003490928189, "z_cm": 28.95938877837713, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.1666667, "found": false}
+{"timestamp": 1790000007.2, "found": true, "pixel_x": 200.9, "pixel_y": 90.7, "x_cm": 6.523240270942394, "y_cm": -3.0779450695898114, "z_cm": 30.09575532159277, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.2333333, "found": true, "pixel_x": 198.5, "pixel_y": 92.1, "x_cm": 6.201356774245043, "y_cm": -2.8964019665723897, "z_cm": 30.222961520092376, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.2666667, "found": false}
+{"timestamp": 1790000007.3, "found": true, "pixel_x": 198.6, "pixel_y": 92.1, "x_cm": 6.5122493978382385, "y_cm": -3.030841131494718, "z_cm": 31.656228199891622, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.3333333, "found": true, "pixel_x": 197.5, "pixel_y": 91.7, "x_cm": 5.840231487779846, "y_cm": -2.846421771572028, "z_cm": 29.187136788602963, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.3666666, "found": false}
+{"timestamp": 1790000007.4, "found": true, "pixel_x": 198.3, "pixel_y": 90.0, "x_cm": 6.140539862533807, "y_cm": -3.183184617399376, "z_cm": 30.0634372532253, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.4333334, "found": true, "pixel_x": 197.3, "pixel_y": 87.6, "x_cm": 5.72038949494302, "y_cm": -3.3641723284258616, "z_cm": 28.744902807150694, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.4666667, "found": false}
+{"timestamp": 1790000007.5, "found": true, "pixel_x": 200.7, "pixel_y": 91.1, "x_cm": 6.795606534081947, "y_cm": -3.157659702877168, "z_cm": 31.43558698091789, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.5333333, "found": true, "pixel_x": 196.0, "pixel_y": 90.3, "x_cm": 5.720852825312, "y_cm": -3.0943720483917674, "z_cm": 29.702517644243834, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.5666666, "found": true, "pixel_x": 198.3, "pixel_y": 88.8, "x_cm": 6.022830632211269, "y_cm": -3.286460088508205, "z_cm": 29.514291227273677, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.6, "found": true, "pixel_x": 197.3, "pixel_y": 91.0, "x_cm": 6.026445637037098, "y_cm": -3.059288255355007, "z_cm": 30.251414084309232, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.6333334, "found": false}
+{"timestamp": 1790000007.6666667, "found": false}
+{"timestamp": 1790000007.7, "found": false}
+{"timestamp": 1790000007.7333333, "found": true, "pixel_x": 200.7, "pixel_y": 93.1, "x_cm": 6.305450970319585, "y_cm": -2.6603128258704936, "z_cm": 29.167539548427786, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.7666667, "found": false}
+{"timestamp": 1790000007.8, "found": true, "pixel_x": 197.7, "pixel_y": 91.0, "x_cm": 6.039280385923368, "y_cm": -3.035879903177935, "z_cm": 30.02874484933561, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.8333333, "found": true, "pixel_x": 197.1, "pixel_y": 91.0, "x_cm": 6.098364045043377, "y_cm": -3.112184484445471, "z_cm": 30.751246435601534, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.8666666, "found": true, "pixel_x": 201.2, "pixel_y": 91.0, "x_cm": 6.548078677777597, "y_cm": -3.0313144714345746, "z_cm": 29.982071338127003, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.9, "found": true, "pixel_x": 198.8, "pixel_y": 89.4, "x_cm": 6.193605158633469, "y_cm": -3.2509501364595477, "z_cm": 29.95417057397127, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.9333334, "found": true, "pixel_x": 198.2, "pixel_y": 91.3, "x_cm": 5.795008947425766, "y_cm": -2.8399341491490455, "z_cm": 28.47283671063632, "z_source": "estimated_from_size"}
+{"timestamp": 1790000007.9666667, "found": true, "pixel_x": 197.9, "pixel_y": 90.3, "x_cm": 5.765922728893941, "y_cm": -2.975270416374975, "z_cm": 28.523864285486056, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.0, "found": false}
+{"timestamp": 1790000008.0333333, "found": true, "pixel_x": 197.0, "pixel_y": 92.1, "x_cm": 5.780577017651903, "y_cm": -2.804902939753596, "z_cm": 29.25128164584572, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.0666666, "found": true, "pixel_x": 195.4, "pixel_y": 92.2, "x_cm": 5.702491014780287, "y_cm": -2.86106045788831, "z_cm": 30.030570405310364, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.1, "found": true, "pixel_x": 198.6, "pixel_y": 89.7, "x_cm": 6.516173627310767, "y_cm": -3.3973462426300145, "z_cm": 31.705374921538468, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.1333334, "found": false}
+{"timestamp": 1790000008.1666667, "found": true, "pixel_x": 196.8, "pixel_y": 91.6, "x_cm": 5.803936684272577, "y_cm": -2.8901842999162985, "z_cm": 29.501724586905986, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.2, "found": true, "pixel_x": 197.5, "pixel_y": 88.8, "x_cm": 6.091258776485316, "y_cm": -3.395395612239148, "z_cm": 30.447912746937448, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.2333333, "found": true, "pixel_x": 195.9, "pixel_y": 91.7, "x_cm": 5.842510583359463, "y_cm": -2.959208960431168, "z_cm": 30.346888338997122, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.2666667, "found": true, "pixel_x": 197.7, "pixel_y": 88.1, "x_cm": 5.8685035734591935, "y_cm": -3.3455859620886503, "z_cm": 29.174990757167507, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.3, "found": true, "pixel_x": 198.3, "pixel_y": 91.2, "x_cm": 5.967897610286209, "y_cm": -2.9188178728038294, "z_cm": 29.22988168773092, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.3333333, "found": true, "pixel_x": 199.6, "pixel_y": 91.7, "x_cm": 6.2008395970408925, "y_cm": -2.872282578966717, "z_cm": 29.433159244836887, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.3666666, "found": false}
+{"timestamp": 1790000008.4, "found": false}
+{"timestamp": 1790000008.4333334, "found": true, "pixel_x": 197.4, "pixel_y": 91.4, "x_cm": 6.189824388546057, "y_cm": -3.074019106366525, "z_cm": 31.00900541701994, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.4666667, "found": true, "pixel_x": 197.9, "pixel_y": 89.3, "x_cm": 6.34115121408252, "y_cm": -3.4236104785539934, "z_cm": 31.344681934560295, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.5, "found": true, "pixel_x": 197.6, "pixel_y": 90.0, "x_cm": 5.964122600706207, "y_cm": -3.138945213378643, "z_cm": 29.691675581754026, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.5333333, "found": false}
+{"timestamp": 1790000008.5666666, "found": true, "pixel_x": 196.7, "pixel_y": 91.0, "x_cm": 5.677287750470035, "y_cm": -2.9195813893386506, "z_cm": 28.94024633016468, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.6, "found": true, "pixel_x": 196.3, "pixel_y": 90.4, "x_cm": 5.924190764759276, "y_cm": -3.1719100168703966, "z_cm": 30.52466611465779, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.6333334, "found": false}
+{"timestamp": 1790000008.6666667, "found": true, "pixel_x": 197.0, "pixel_y": 91.0, "x_cm": 6.067695897225113, "y_cm": -3.090407280408162, "z_cm": 30.652782999924028, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.7, "found": true, "pixel_x": 197.1, "pixel_y": 87.9, "x_cm": 6.156552170967781, "y_cm": -3.592574752110929, "z_cm": 31.091520200926, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.7333333, "found": true, "pixel_x": 198.0, "pixel_y": 90.8, "x_cm": 6.364118849369864, "y_cm": -3.201418268721006, "z_cm": 31.407868313958915, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.7666667, "found": true, "pixel_x": 199.0, "pixel_y": 91.9, "x_cm": 6.190133779247101, "y_cm": -2.8843012408630475, "z_cm": 29.84097373592354, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.8, "found": false}
+{"timestamp": 1790000008.8333333, "found": true, "pixel_x": 196.9, "pixel_y": 89.3, "x_cm": 6.014167077603901, "y_cm": -3.3211471548958333, "z_cm": 30.490109536313184, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.8666666, "found": false}
+{"timestamp": 1790000008.9, "found": false}
+{"timestamp": 1790000008.9333334, "found": true, "pixel_x": 197.1, "pixel_y": 92.5, "x_cm": 6.000418500098207, "y_cm": -2.8469634242061552, "z_cm": 30.307225396686437, "z_source": "estimated_from_size"}
+{"timestamp": 1790000008.9666667, "found": false}
+{"timestamp": 1790000009.0, "found": false}
+{"timestamp": 1790000009.0333333, "found": true, "pixel_x": 197.0, "pixel_y": 91.0, "x_cm": 5.833761743990746, "y_cm": -2.9847088428012443, "z_cm": 29.4895209579194, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.0666666, "found": true, "pixel_x": 197.0, "pixel_y": 88.5, "x_cm": 5.941068897015209, "y_cm": -3.391909499432937, "z_cm": 30.01844584089374, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.1, "found": false}
+{"timestamp": 1790000009.1333334, "found": true, "pixel_x": 199.7, "pixel_y": 91.6, "x_cm": 6.143315680104737, "y_cm": -2.860015496210032, "z_cm": 29.077945871659434, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.1666667, "found": true, "pixel_x": 199.1, "pixel_y": 94.2, "x_cm": 6.053738434781908, "y_cm": -2.4948467930715967, "z_cm": 29.111344714374198, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.2, "found": true, "pixel_x": 198.0, "pixel_y": 93.8, "x_cm": 6.202766600617667, "y_cm": -2.6901437317879267, "z_cm": 30.605138945305118, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.2333333, "found": true, "pixel_x": 198.5, "pixel_y": 92.2, "x_cm": 6.180703310816395, "y_cm": -2.8747070528940566, "z_cm": 30.159233288930867, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.2666667, "found": true, "pixel_x": 197.4, "pixel_y": 91.3, "x_cm": 5.961922061565273, "y_cm": -2.9813897690070754, "z_cm": 29.88789322799485, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.3, "found": false}
+{"timestamp": 1790000009.3333333, "found": false}
+{"timestamp": 1790000009.3666666, "found": true, "pixel_x": 196.3, "pixel_y": 90.7, "x_cm": 5.676263387698688, "y_cm": -2.988064992411901, "z_cm": 29.201997251022426, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.4, "found": false}
+{"timestamp": 1790000009.4333334, "found": false}
+{"timestamp": 1790000009.4666667, "found": true, "pixel_x": 199.5, "pixel_y": 94.6, "x_cm": 5.899565141254829, "y_cm": -2.365165531646616, "z_cm": 28.10333458928568, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.5, "found": true, "pixel_x": 198.9, "pixel_y": 91.3, "x_cm": 6.144576014925862, "y_cm": -2.960839080477262, "z_cm": 29.682990782263644, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.5333333, "found": true, "pixel_x": 195.8, "pixel_y": 92.7, "x_cm": 5.71772948752847, "y_cm": -2.7758702127144463, "z_cm": 29.814851295698663, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.5666666, "found": true, "pixel_x": 198.1, "pixel_y": 90.1, "x_cm": 5.992468782079416, "y_cm": -3.1124483113497097, "z_cm": 29.53167598254589, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.6, "found": true, "pixel_x": 197.8, "pixel_y": 91.8, "x_cm": 6.101328641166623, "y_cm": -2.9369801318726254, "z_cm": 30.23508485714365, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.6333334, "found": true, "pixel_x": 199.1, "pixel_y": 92.1, "x_cm": 6.171342061316212, "y_cm": -2.8349560261202216, "z_cm": 29.643011619294317, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.6666667, "found": true, "pixel_x": 199.3, "pixel_y": 90.4, "x_cm": 6.360137348956267, "y_cm": -3.157632255142792, "z_cm": 30.402666037844142, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.7, "found": false}
+{"timestamp": 1790000009.7333333, "found": false}
+{"timestamp": 1790000009.7666667, "found": true, "pixel_x": 199.6, "pixel_y": 89.0, "x_cm": 6.05013372344513, "y_cm": -3.177853734700235, "z_cm": 28.765384373390344, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.8, "found": true, "pixel_x": 196.1, "pixel_y": 93.0, "x_cm": 5.774034517782594, "y_cm": -2.736303396192524, "z_cm": 29.856914557742716, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.8333333, "found": true, "pixel_x": 197.2, "pixel_y": 92.5, "x_cm": 5.720775068855346, "y_cm": -2.703561059017253, "z_cm": 28.765185101943977, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.8666666, "found": true, "pixel_x": 198.4, "pixel_y": 92.2, "x_cm": 6.20695258848402, "y_cm": -2.8989984526513237, "z_cm": 30.346338109975186, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.9, "found": false}
+{"timestamp": 1790000009.9333334, "found": true, "pixel_x": 197.0, "pixel_y": 90.3, "x_cm": 5.870409598139643, "y_cm": -3.0934601995588644, "z_cm": 29.71349618310376, "z_source": "estimated_from_size"}
+{"timestamp": 1790000009.9666667, "found": true, "pixel_x": 196.9, "pixel_y": 90.4, "x_cm": 5.6894935452503255, "y_cm": -2.9878612797355326, "z_cm": 28.82957921013237, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.0, "found": true, "pixel_x": 199.1, "pixel_y": 92.9, "x_cm": 6.08962075085699, "y_cm": -2.6942702997246064, "z_cm": 29.265999613015765, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.0333333, "found": true, "pixel_x": 196.5, "pixel_y": 92.3, "x_cm": 5.873123177353057, "y_cm": -2.8507855304471086, "z_cm": 30.05270043645865, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.0666666, "found": true, "pixel_x": 200.3, "pixel_y": 88.2, "x_cm": 6.561090812446635, "y_cm": -3.508958550151559, "z_cm": 30.643693421353326, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.1, "found": false}
+{"timestamp": 1790000010.1333334, "found": true, "pixel_x": 198.9, "pixel_y": 91.0, "x_cm": 6.08093837957854, "y_cm": -2.9706462952609773, "z_cm": 29.379388158250997, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.1666667, "found": false}
+{"timestamp": 1790000010.2, "found": true, "pixel_x": 199.3, "pixel_y": 87.7, "x_cm": 6.112473445223926, "y_cm": -3.4103221636185626, "z_cm": 29.228079680205486, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.2333333, "found": true, "pixel_x": 199.2, "pixel_y": 90.7, "x_cm": 6.377533165407756, "y_cm": -3.1253175555099366, "z_cm": 30.56971364559894, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.2666667, "found": false}
+{"timestamp": 1790000010.3, "found": true, "pixel_x": 196.4, "pixel_y": 88.7, "x_cm": 5.80355311517139, "y_cm": -3.329821563014797, "z_cm": 29.795342566696316, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.3333333, "found": true, "pixel_x": 197.5, "pixel_y": 92.6, "x_cm": 5.9907726603304265, "y_cm": -2.7903226887357118, "z_cm": 29.896384784421425, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.3666666, "found": true, "pixel_x": 197.8, "pixel_y": 90.9, "x_cm": 5.904520997357307, "y_cm": -2.96515620991742, "z_cm": 29.278911333773674, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.4, "found": true, "pixel_x": 197.3, "pixel_y": 90.7, "x_cm": 5.952924418652758, "y_cm": -3.0614095177460525, "z_cm": 29.91323315839934, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.4333334, "found": false}
+{"timestamp": 1790000010.4666667, "found": false}
+{"timestamp": 1790000010.5, "found": true, "pixel_x": 197.2, "pixel_y": 91.8, "x_cm": 6.058668785401732, "y_cm": -2.969382337396791, "z_cm": 30.51147367522743, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.5333333, "found": true, "pixel_x": 198.4, "pixel_y": 90.5, "x_cm": 5.745331217660621, "y_cm": -2.9116523061053576, "z_cm": 28.104398481418777, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.5666666, "found": true, "pixel_x": 200.4, "pixel_y": 92.5, "x_cm": 6.518035281413085, "y_cm": -2.847611284536873, "z_cm": 30.362374524591402, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.6, "found": true, "pixel_x": 198.4, "pixel_y": 91.2, "x_cm": 6.087192728497522, "y_cm": -2.978058593773056, "z_cm": 29.7288052094328, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.6333334, "found": true, "pixel_x": 195.1, "pixel_y": 90.7, "x_cm": 5.9919962978864, "y_cm": -3.2550613493609863, "z_cm": 31.84598272174581, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.6666667, "found": false}
+{"timestamp": 1790000010.7, "found": true, "pixel_x": 196.7, "pixel_y": 90.8, "x_cm": 5.796057544091495, "y_cm": -3.0176153594259163, "z_cm": 29.535519340867502, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.7333333, "found": false}
+{"timestamp": 1790000010.7666667, "found": false}
+{"timestamp": 1790000010.8, "found": true, "pixel_x": 194.7, "pixel_y": 89.6, "x_cm": 5.302708969375393, "y_cm": -3.057262456908385, "z_cm": 28.443392990161094, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.8333333, "found": true, "pixel_x": 198.7, "pixel_y": 89.0, "x_cm": 6.0899592111888365, "y_cm": -3.257173679532212, "z_cm": 29.512783737337116, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.8666666, "found": true, "pixel_x": 197.7, "pixel_y": 91.9, "x_cm": 5.6932569547091045, "y_cm": -2.7339239547347396, "z_cm": 28.31207086057864, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.9, "found": true, "pixel_x": 198.0, "pixel_y": 89.6, "x_cm": 5.9258896688785905, "y_cm": -3.147537662188074, "z_cm": 29.270648254270988, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.9333334, "found": true, "pixel_x": 199.0, "pixel_y": 91.0, "x_cm": 5.882538733138211, "y_cm": -2.8584853315288563, "z_cm": 28.32423756844194, "z_source": "estimated_from_size"}
+{"timestamp": 1790000010.9666667, "found": true, "pixel_x": 197.3, "pixel_y": 92.4, "x_cm": 5.996429886799151, "y_cm": -2.837904270033032, "z_cm": 30.081718972171075, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.0, "found": false}
+{"timestamp": 1790000011.0333333, "found": true, "pixel_x": 195.7, "pixel_y": 91.3, "x_cm": 5.31526869577848, "y_cm": -2.7715546751570637, "z_cm": 27.78132874848417, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.0666666, "found": true, "pixel_x": 196.1, "pixel_y": 89.8, "x_cm": 5.825008136764376, "y_cm": -3.218512355637555, "z_cm": 30.130018642801648, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.1, "found": true, "pixel_x": 196.5, "pixel_y": 90.0, "x_cm": 5.671767017530198, "y_cm": -3.0619522829769363, "z_cm": 29.018171288014415, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.1333334, "found": true, "pixel_x": 197.2, "pixel_y": 89.4, "x_cm": 6.199785706257665, "y_cm": -3.386096452098563, "z_cm": 31.191240111833658, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.1666667, "found": false}
+{"timestamp": 1790000011.2, "found": true, "pixel_x": 198.9, "pixel_y": 90.1, "x_cm": 6.079208858871906, "y_cm": -3.0851484022920452, "z_cm": 29.35712590225352, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.2333333, "found": true, "pixel_x": 199.5, "pixel_y": 89.4, "x_cm": 6.102552721298442, "y_cm": -3.158478330280368, "z_cm": 29.031049009776204, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.2666667, "found": true, "pixel_x": 196.7, "pixel_y": 89.7, "x_cm": 5.8545024519723565, "y_cm": -3.2075271331948585, "z_cm": 29.86817321908601, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.3, "found": true, "pixel_x": 200.0, "pixel_y": 87.5, "x_cm": 6.53627463689061, "y_cm": -3.6223875386960085, "z_cm": 30.771971483484318, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.3333333, "found": true, "pixel_x": 197.4, "pixel_y": 91.3, "x_cm": 5.9029474669712485, "y_cm": -2.9367540736747157, "z_cm": 29.53657219754674, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.3666666, "found": true, "pixel_x": 199.5, "pixel_y": 87.9, "x_cm": 6.2503804470647575, "y_cm": -3.4483651236699826, "z_cm": 29.772121927775988, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.4, "found": true, "pixel_x": 198.0, "pixel_y": 91.4, "x_cm": 6.1950347108158805, "y_cm": -3.029702491551536, "z_cm": 30.590963663918576, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.4333334, "found": true, "pixel_x": 199.0, "pixel_y": 91.6, "x_cm": 6.300368615980498, "y_cm": -2.980962102128026, "z_cm": 30.378723972507153, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.4666667, "found": true, "pixel_x": 201.2, "pixel_y": 88.9, "x_cm": 6.4513318236290615, "y_cm": -3.27598391369326, "z_cm": 29.51048631332369, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.5, "found": false}
+{"timestamp": 1790000011.5333333, "found": true, "pixel_x": 196.0, "pixel_y": 91.4, "x_cm": 5.774076280308709, "y_cm": -2.966649780143741, "z_cm": 29.95496524787196, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.5666666, "found": true, "pixel_x": 197.5, "pixel_y": 90.3, "x_cm": 5.825785868328398, "y_cm": -3.045347919363452, "z_cm": 29.1347658703551, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.6, "found": true, "pixel_x": 197.1, "pixel_y": 89.3, "x_cm": 5.9114624925390755, "y_cm": -3.254632327362668, "z_cm": 29.815389464001697, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.6333334, "found": true, "pixel_x": 197.5, "pixel_y": 92.6, "x_cm": 5.896842512469496, "y_cm": -2.745238200189473, "z_cm": 29.45551125289695, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.6666667, "found": true, "pixel_x": 198.3, "pixel_y": 91.2, "x_cm": 6.10122295431911, "y_cm": -2.9939992164709857, "z_cm": 29.88369756593979, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.7, "found": true, "pixel_x": 198.9, "pixel_y": 89.5, "x_cm": 5.933587998374262, "y_cm": -3.1027832671815667, "z_cm": 28.644395624704114, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.7333333, "found": true, "pixel_x": 196.6, "pixel_y": 90.3, "x_cm": 5.953468455483374, "y_cm": -3.1617595883715537, "z_cm": 30.375759042041693, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.7666667, "found": true, "pixel_x": 196.7, "pixel_y": 92.8, "x_cm": 5.979145235055944, "y_cm": -2.818166886149287, "z_cm": 30.47128322131481, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.8, "found": true, "pixel_x": 196.7, "pixel_y": 88.1, "x_cm": 5.845872157762864, "y_cm": -3.4246488356616824, "z_cm": 29.80686963444511, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.8333333, "found": true, "pixel_x": 198.7, "pixel_y": 89.1, "x_cm": 6.283263918218338, "y_cm": -3.3536264556582323, "z_cm": 30.453544285572924, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.8666666, "found": true, "pixel_x": 198.2, "pixel_y": 91.1, "x_cm": 5.887582311609198, "y_cm": -2.9044076343320953, "z_cm": 28.876602075175455, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.9, "found": true, "pixel_x": 199.7, "pixel_y": 91.3, "x_cm": 6.220731898345279, "y_cm": -2.9352479550508823, "z_cm": 29.46512906178327, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.9333334, "found": true, "pixel_x": 196.9, "pixel_y": 89.5, "x_cm": 5.856061476658686, "y_cm": -3.2145696758027706, "z_cm": 29.7262011491338, "z_source": "estimated_from_size"}
+{"timestamp": 1790000011.9666667, "found": true, "pixel_x": 197.7, "pixel_y": 91.2, "x_cm": 5.601449777295115, "y_cm": -2.7836485116884577, "z_cm": 27.85721204762677, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.0, "found": false}
+{"timestamp": 1790000012.0333333, "found": true, "pixel_x": 196.5, "pixel_y": 90.9, "x_cm": 5.840769252385776, "y_cm": -3.035770214073128, "z_cm": 29.91629687446541, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.0666666, "found": true, "pixel_x": 199.3, "pixel_y": 90.3, "x_cm": 6.384461433208355, "y_cm": -3.1757823609572178, "z_cm": 30.507691088214834, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.1, "found": true, "pixel_x": 196.4, "pixel_y": 91.9, "x_cm": 5.788285654723323, "y_cm": -2.877888524902981, "z_cm": 29.732129948685206, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.1333334, "found": true, "pixel_x": 197.2, "pixel_y": 91.1, "x_cm": 5.8316724471684, "y_cm": -2.945118452675945, "z_cm": 29.33811205375224, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.1666667, "found": true, "pixel_x": 197.4, "pixel_y": 88.4, "x_cm": 6.1528531930266555, "y_cm": -3.4986642596575206, "z_cm": 30.81365697773798, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.2, "found": false}
+{"timestamp": 1790000012.2333333, "found": true, "pixel_x": 197.3, "pixel_y": 91.4, "x_cm": 5.9914671888752284, "y_cm": -2.9816940594511268, "z_cm": 30.102845727518595, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.2666667, "found": true, "pixel_x": 197.7, "pixel_y": 91.1, "x_cm": 6.001018797611029, "y_cm": -3.0036299590663185, "z_cm": 29.843933125559886, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.3, "found": true, "pixel_x": 197.5, "pixel_y": 89.8, "x_cm": 6.065079501140564, "y_cm": -3.2283243474758208, "z_cm": 30.25859786009871, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.3333333, "found": true, "pixel_x": 198.7, "pixel_y": 92.4, "x_cm": 6.231924124546483, "y_cm": -2.8469390691926333, "z_cm": 30.212327218961388, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.3666666, "found": true, "pixel_x": 199.5, "pixel_y": 92.8, "x_cm": 6.013099200959007, "y_cm": -2.646657630440608, "z_cm": 28.604764358884893, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.4, "found": false}
+{"timestamp": 1790000012.4333334, "found": true, "pixel_x": 199.0, "pixel_y": 89.0, "x_cm": 6.143902859855, "y_cm": -3.2646232140254585, "z_cm": 29.590028132077897, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.4666667, "found": true, "pixel_x": 197.2, "pixel_y": 88.5, "x_cm": 6.077705091320379, "y_cm": -3.454425008821405, "z_cm": 30.57133302322599, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.5, "found": false}
+{"timestamp": 1790000012.5333333, "found": true, "pixel_x": 199.3, "pixel_y": 91.0, "x_cm": 6.252761580600555, "y_cm": -3.0291809693228124, "z_cm": 29.93836601678306, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.5666666, "found": true, "pixel_x": 198.4, "pixel_y": 90.7, "x_cm": 5.982182667226449, "y_cm": -2.9944911783492247, "z_cm": 29.251611531533396, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.6, "found": true, "pixel_x": 197.5, "pixel_y": 91.0, "x_cm": 6.228732604550893, "y_cm": -3.140249044234467, "z_cm": 31.141054491856085, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.6333334, "found": true, "pixel_x": 195.6, "pixel_y": 89.3, "x_cm": 5.469300580684497, "y_cm": -3.1289117454595123, "z_cm": 28.67311107193445, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.6666667, "found": true, "pixel_x": 195.5, "pixel_y": 92.1, "x_cm": 5.463081491962952, "y_cm": -2.7549802094208102, "z_cm": 28.709558725291068, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.7, "found": true, "pixel_x": 196.8, "pixel_y": 90.6, "x_cm": 5.802653353828025, "y_cm": -3.04136165288289, "z_cm": 29.52525591552644, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.7333333, "found": true, "pixel_x": 199.5, "pixel_y": 92.9, "x_cm": 6.049772711747101, "y_cm": -2.6464852777512506, "z_cm": 28.770629211239044, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.7666667, "found": false}
+{"timestamp": 1790000012.8, "found": true, "pixel_x": 195.5, "pixel_y": 90.9, "x_cm": 5.611165647988795, "y_cm": -2.99545912870798, "z_cm": 29.500076017362595, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.8333333, "found": false}
+{"timestamp": 1790000012.8666666, "found": true, "pixel_x": 197.2, "pixel_y": 89.7, "x_cm": 5.67982018558469, "y_cm": -3.061535769629355, "z_cm": 28.560828899495082, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.9, "found": true, "pixel_x": 198.1, "pixel_y": 92.5, "x_cm": 5.865301463558216, "y_cm": -2.7144246078539744, "z_cm": 28.871281101642875, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.9333334, "found": true, "pixel_x": 194.1, "pixel_y": 90.1, "x_cm": 5.532978722644983, "y_cm": -3.181036028657563, "z_cm": 30.176511935640296, "z_source": "estimated_from_size"}
+{"timestamp": 1790000012.9666667, "found": false}
+{"timestamp": 1790000013.0, "found": false}
+{"timestamp": 1790000013.0333333, "found": true, "pixel_x": 197.0, "pixel_y": 89.4, "x_cm": 5.562029499526698, "y_cm": -3.0537985274286905, "z_cm": 28.098833677881306, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.0666666, "found": true, "pixel_x": 195.9, "pixel_y": 91.4, "x_cm": 5.657779186193169, "y_cm": -2.9086549871913006, "z_cm": 29.404468301253118, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.1, "found": true, "pixel_x": 199.0, "pixel_y": 90.4, "x_cm": 6.346032548159467, "y_cm": -3.1848310571379996, "z_cm": 30.601231490308212, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.1333334, "found": false}
+{"timestamp": 1790000013.1666667, "found": true, "pixel_x": 196.8, "pixel_y": 91.6, "x_cm": 5.876552646555063, "y_cm": -2.9333789927997795, "z_cm": 29.853927180879847, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.2, "found": true, "pixel_x": 196.7, "pixel_y": 93.2, "x_cm": 5.8529658724656874, "y_cm": -2.7063985880840553, "z_cm": 29.817806163629484, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.2333333, "found": true, "pixel_x": 198.9, "pixel_y": 92.4, "x_cm": 5.938016971724792, "y_cm": -2.705391996331857, "z_cm": 28.70416173464647, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.2666667, "found": true, "pixel_x": 196.9, "pixel_y": 90.3, "x_cm": 5.781278143403544, "y_cm": -3.0633434131887243, "z_cm": 29.333041733693832, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.3, "found": true, "pixel_x": 199.9, "pixel_y": 91.7, "x_cm": 6.117439781978161, "y_cm": -2.818986170384841, "z_cm": 28.873226163399544, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.3333333, "found": true, "pixel_x": 198.0, "pixel_y": 88.9, "x_cm": 6.252791026067713, "y_cm": -3.4286176850853085, "z_cm": 30.839795756550664, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.3666666, "found": true, "pixel_x": 200.2, "pixel_y": 89.8, "x_cm": 6.128812312678198, "y_cm": -3.0639577453265794, "z_cm": 28.73277102710576, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.4, "found": true, "pixel_x": 200.3, "pixel_y": 92.6, "x_cm": 6.396941357955744, "y_cm": -2.7913218893970555, "z_cm": 29.86173310060797, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.4333334, "found": false}
+{"timestamp": 1790000013.4666667, "found": true, "pixel_x": 198.0, "pixel_y": 90.3, "x_cm": 6.044384179635655, "y_cm": -3.1107014005520037, "z_cm": 29.80052693558437, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.5, "found": true, "pixel_x": 195.2, "pixel_y": 91.5, "x_cm": 5.779067981165308, "y_cm": -3.021049368999517, "z_cm": 30.586464265442366, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.5333333, "found": true, "pixel_x": 199.0, "pixel_y": 91.0, "x_cm": 6.047686136589629, "y_cm": -2.9407925002270336, "z_cm": 29.111279834059264, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.5666666, "found": true, "pixel_x": 199.4, "pixel_y": 90.2, "x_cm": 6.131712839940031, "y_cm": -3.0670011249115396, "z_cm": 29.237674909390808, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.6, "found": false}
+{"timestamp": 1790000013.6333334, "found": true, "pixel_x": 196.6, "pixel_y": 91.4, "x_cm": 5.578962703217327, "y_cm": -2.819979254514436, "z_cm": 28.47286995990008, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.6666667, "found": true, "pixel_x": 198.2, "pixel_y": 89.0, "x_cm": 5.812506127786479, "y_cm": -3.1616211313174887, "z_cm": 28.57141330277664, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.7, "found": true, "pixel_x": 197.8, "pixel_y": 90.8, "x_cm": 6.306062436126859, "y_cm": -3.1936877893968454, "z_cm": 31.257877515314608, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.7333333, "found": true, "pixel_x": 201.8, "pixel_y": 92.2, "x_cm": 6.359115199017523, "y_cm": -2.7417594461755823, "z_cm": 28.706853262838337, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.7666667, "found": true, "pixel_x": 196.3, "pixel_y": 93.1, "x_cm": 6.000604133192227, "y_cm": -2.814310783113179, "z_cm": 30.891750357087282, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.8, "found": true, "pixel_x": 198.2, "pixel_y": 92.4, "x_cm": 5.988266060274099, "y_cm": -2.774494082665115, "z_cm": 29.41273904349499, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.8333333, "found": true, "pixel_x": 196.6, "pixel_y": 89.1, "x_cm": 5.821805931084733, "y_cm": -3.262471212261406, "z_cm": 29.71833268698241, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.8666666, "found": true, "pixel_x": 195.8, "pixel_y": 89.2, "x_cm": 5.795416194083249, "y_cm": -3.311048229981325, "z_cm": 30.20667100872842, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.9, "found": true, "pixel_x": 195.7, "pixel_y": 88.6, "x_cm": 5.672920505628158, "y_cm": -3.323789449682708, "z_cm": 29.61350716734961, "z_source": "estimated_from_size"}
+{"timestamp": 1790000013.9333334, "found": false}
+{"timestamp": 1790000013.9666667, "found": true, "pixel_x": 195.5, "pixel_y": 90.1, "x_cm": 5.522263853795862, "y_cm": -3.0573197325828225, "z_cm": 28.995052365925158, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.0, "found": true, "pixel_x": 197.3, "pixel_y": 93.6, "x_cm": 5.987483933887268, "y_cm": -2.6598488862438723, "z_cm": 30.070758710587356, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.0333333, "found": true, "pixel_x": 195.8, "pixel_y": 91.6, "x_cm": 5.659281209381373, "y_cm": -2.89827867257493, "z_cm": 29.50752647811386, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.0666666, "found": true, "pixel_x": 196.3, "pixel_y": 91.9, "x_cm": 5.686625794089044, "y_cm": -2.8340765210817795, "z_cm": 29.275780385664824, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.1, "found": false}
+{"timestamp": 1790000014.1333334, "found": false}
+{"timestamp": 1790000014.1666667, "found": true, "pixel_x": 195.1, "pixel_y": 90.6, "x_cm": 5.53983095531051, "y_cm": -3.024551338983055, "z_cm": 29.413472847022383, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.2, "found": true, "pixel_x": 194.6, "pixel_y": 90.7, "x_cm": 5.409538123307664, "y_cm": -2.9892556841294318, "z_cm": 29.12875260690355, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.2333333, "found": true, "pixel_x": 194.5, "pixel_y": 95.0, "x_cm": 5.706421429125093, "y_cm": -2.52554706009761, "z_cm": 30.790967166028295, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.2666667, "found": true, "pixel_x": 199.6, "pixel_y": 92.6, "x_cm": 6.244347951886461, "y_cm": -2.7749928773216257, "z_cm": 29.641763720007216, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.3, "found": true, "pixel_x": 198.7, "pixel_y": 90.0, "x_cm": 6.628971620925111, "y_cm": -3.3985099886412544, "z_cm": 32.15354827307607, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.3333333, "found": true, "pixel_x": 198.8, "pixel_y": 93.8, "x_cm": 6.32523066573133, "y_cm": -2.682150431668614, "z_cm": 30.590773486772537, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.3666666, "found": true, "pixel_x": 200.2, "pixel_y": 93.4, "x_cm": 6.3540564945895115, "y_cm": -2.6678226764445996, "z_cm": 29.790526821073087, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.4, "found": false}
+{"timestamp": 1790000014.4333334, "found": true, "pixel_x": 194.5, "pixel_y": 88.5, "x_cm": 5.500087976977794, "y_cm": -3.34670279502486, "z_cm": 29.69182777234204, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.4666667, "found": true, "pixel_x": 197.5, "pixel_y": 90.9, "x_cm": 5.643849502358199, "y_cm": -2.8564888516432463, "z_cm": 28.17480658902338, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.5, "found": true, "pixel_x": 197.7, "pixel_y": 92.9, "x_cm": 6.130464068236981, "y_cm": -2.8035343897368663, "z_cm": 30.469519863733858, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.5333333, "found": true, "pixel_x": 199.1, "pixel_y": 89.2, "x_cm": 6.251645766397107, "y_cm": -3.2851668859709906, "z_cm": 30.017858368935048, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.5666666, "found": true, "pixel_x": 197.9, "pixel_y": 93.5, "x_cm": 6.16193775385711, "y_cm": -2.709483807464527, "z_cm": 30.444256113682005, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.6, "found": true, "pixel_x": 196.4, "pixel_y": 89.4, "x_cm": 6.02087506885074, "y_cm": -3.3606982987523937, "z_cm": 30.892949980597873, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.6333334, "found": false}
+{"timestamp": 1790000014.6666667, "found": true, "pixel_x": 198.5, "pixel_y": 90.0, "x_cm": 5.982553039482553, "y_cm": -3.0832005737606867, "z_cm": 29.168303029741093, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.7, "found": false}
+{"timestamp": 1790000014.7333333, "found": true, "pixel_x": 198.2, "pixel_y": 91.5, "x_cm": 5.957849252362972, "y_cm": -2.884675148806125, "z_cm": 29.250437354099223, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.7666667, "found": true, "pixel_x": 197.2, "pixel_y": 88.5, "x_cm": 5.988650325950296, "y_cm": -3.403971622309133, "z_cm": 30.16330769249166, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.8, "found": true, "pixel_x": 197.6, "pixel_y": 89.6, "x_cm": 5.950453447640006, "y_cm": -3.1886368200871607, "z_cm": 29.68374804004475, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.8333333, "found": true, "pixel_x": 195.6, "pixel_y": 89.9, "x_cm": 5.849283907124933, "y_cm": -3.2577771471888695, "z_cm": 30.620046550438786, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.8666666, "found": true, "pixel_x": 200.3, "pixel_y": 92.4, "x_cm": 6.441841302515342, "y_cm": -2.84420364714694, "z_cm": 30.080582729128118, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.9, "found": true, "pixel_x": 195.5, "pixel_y": 93.3, "x_cm": 5.777906214185851, "y_cm": -2.7304562091426146, "z_cm": 30.356865554928074, "z_source": "estimated_from_size"}
+{"timestamp": 1790000014.9333334, "found": false}
+{"timestamp": 1790000014.9666667, "found": true, "pixel_x": 200.1, "pixel_y": 89.5, "x_cm": 6.31614931692958, "y_cm": -3.19796838913289, "z_cm": 29.62497159721375, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.0, "found": true, "pixel_x": 197.9, "pixel_y": 88.9, "x_cm": 6.145476372619614, "y_cm": -3.3769930478923227, "z_cm": 30.37985761756932, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.0333333, "found": true, "pixel_x": 198.1, "pixel_y": 92.9, "x_cm": 6.034908254694998, "y_cm": -2.7349944130232284, "z_cm": 29.702428655459187, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.0666666, "found": true, "pixel_x": 196.7, "pixel_y": 91.5, "x_cm": 6.19071044029681, "y_cm": -3.1157292450124845, "z_cm": 31.54696382300298, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.1, "found": false}
+{"timestamp": 1790000015.1333334, "found": false}
+{"timestamp": 1790000015.1666667, "found": true, "pixel_x": 198.6, "pixel_y": 91.0, "x_cm": 6.310391264251283, "y_cm": -3.10360069761118, "z_cm": 30.713941655710254, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.2, "found": true, "pixel_x": 197.0, "pixel_y": 90.4, "x_cm": 5.759327648883299, "y_cm": -3.031460120941184, "z_cm": 29.12748491368692, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.2333333, "found": true, "pixel_x": 196.9, "pixel_y": 89.7, "x_cm": 5.824563059912782, "y_cm": -3.161209777490815, "z_cm": 29.527206865859615, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.2666667, "found": true, "pixel_x": 199.3, "pixel_y": 95.1, "x_cm": 6.0760583154027294, "y_cm": -2.3743175186248773, "z_cm": 29.05294557192925, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.3, "found": false}
+{"timestamp": 1790000015.3333333, "found": false}
+{"timestamp": 1790000015.3666666, "found": true, "pixel_x": 196.4, "pixel_y": 89.6, "x_cm": 5.868461984801497, "y_cm": -3.245480995092186, "z_cm": 30.121611910446596, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.4, "found": true, "pixel_x": 198.9, "pixel_y": 90.5, "x_cm": 6.19971631691622, "y_cm": -3.097783293101005, "z_cm": 29.945581831734554, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.4333334, "found": true, "pixel_x": 200.2, "pixel_y": 91.8, "x_cm": 6.044663288696177, "y_cm": -2.7438665214304288, "z_cm": 28.28629771807815, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.4666667, "found": true, "pixel_x": 200.0, "pixel_y": 90.7, "x_cm": 6.197529855585302, "y_cm": -2.985098032290699, "z_cm": 29.158012293788175, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.5, "found": false}
+{"timestamp": 1790000015.5333333, "found": false}
+{"timestamp": 1790000015.5666666, "found": false}
+{"timestamp": 1790000015.6, "found": false}
+{"timestamp": 1790000015.6333334, "found": true, "pixel_x": 198.9, "pixel_y": 93.0, "x_cm": 6.292341426632793, "y_cm": -2.779068124459266, "z_cm": 30.369667951330563, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.6666667, "found": false}
+{"timestamp": 1790000015.7, "found": false}
+{"timestamp": 1790000015.7333333, "found": true, "pixel_x": 196.8, "pixel_y": 90.9, "x_cm": 5.835264625536931, "y_cm": -3.0130588081513503, "z_cm": 29.64162754193677, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.7666667, "found": true, "pixel_x": 195.6, "pixel_y": 94.1, "x_cm": 5.489734289138498, "y_cm": -2.479989586623346, "z_cm": 28.772159805223517, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.8, "found": true, "pixel_x": 197.2, "pixel_y": 90.9, "x_cm": 5.823339987699003, "y_cm": -2.9658051085807617, "z_cm": 29.28939534347404, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.8333333, "found": true, "pixel_x": 195.2, "pixel_y": 92.2, "x_cm": 5.167615352169811, "y_cm": -2.605922020391152, "z_cm": 27.370548746861687, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.8666666, "found": true, "pixel_x": 199.3, "pixel_y": 91.6, "x_cm": 6.245520895158672, "y_cm": -2.92501516800139, "z_cm": 29.87232933242727, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.9, "found": true, "pixel_x": 196.0, "pixel_y": 91.3, "x_cm": 5.490627698289399, "y_cm": -2.8349371147445694, "z_cm": 28.514522517771344, "z_source": "estimated_from_size"}
+{"timestamp": 1790000015.9333334, "found": false}
+{"timestamp": 1790000015.9666667, "found": false}
+{"timestamp": 1790000016.0, "found": true, "pixel_x": 197.1, "pixel_y": 93.5, "x_cm": 6.06536722102123, "y_cm": -2.733622668408517, "z_cm": 30.60945000144618, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.0333333, "found": true, "pixel_x": 195.8, "pixel_y": 92.1, "x_cm": 5.734814515807257, "y_cm": -2.858791891944343, "z_cm": 29.866508371540007, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.0666666, "found": true, "pixel_x": 197.8, "pixel_y": 89.4, "x_cm": 6.080191897727679, "y_cm": -3.271455266690141, "z_cm": 30.176693686636817, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.1, "found": false}
+{"timestamp": 1790000016.1333334, "found": true, "pixel_x": 196.1, "pixel_y": 93.3, "x_cm": 5.739897252054755, "y_cm": -2.672407758464687, "z_cm": 29.668147558766332, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.1666667, "found": false}
+{"timestamp": 1790000016.2, "found": true, "pixel_x": 196.4, "pixel_y": 91.0, "x_cm": 5.592680255509093, "y_cm": -2.902058323626116, "z_cm": 28.706507938414234, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.2333333, "found": false}
+{"timestamp": 1790000016.2666667, "found": true, "pixel_x": 197.8, "pixel_y": 90.9, "x_cm": 6.117859681598532, "y_cm": -3.073499398803127, "z_cm": 30.301033508028976, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.3, "found": false}
+{"timestamp": 1790000016.3333333, "found": true, "pixel_x": 200.6, "pixel_y": 89.3, "x_cm": 6.5073088549756175, "y_cm": -3.2889398851666365, "z_cm": 30.206931133202566, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.3666666, "found": true, "pixel_x": 198.8, "pixel_y": 90.9, "x_cm": 6.271794978872808, "y_cm": -3.0874941309664705, "z_cm": 30.38510394223657, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.4, "found": true, "pixel_x": 195.2, "pixel_y": 89.1, "x_cm": 5.4887208947228885, "y_cm": -3.2015396257427198, "z_cm": 29.070874331650437, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.4333334, "found": true, "pixel_x": 198.3, "pixel_y": 93.0, "x_cm": 5.967853475107002, "y_cm": -2.677591836808123, "z_cm": 29.199363170277003, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.4666667, "found": true, "pixel_x": 201.1, "pixel_y": 92.1, "x_cm": 6.551920184532379, "y_cm": -2.8807979985349994, "z_cm": 30.09401090726807, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.5, "found": true, "pixel_x": 198.4, "pixel_y": 89.8, "x_cm": 6.078954015473678, "y_cm": -3.1746809517199317, "z_cm": 29.706548976779334, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.5333333, "found": true, "pixel_x": 194.7, "pixel_y": 90.8, "x_cm": 5.602719046625773, "y_cm": -3.0590108110706087, "z_cm": 30.028592085316397, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.5666666, "found": true, "pixel_x": 195.2, "pixel_y": 90.5, "x_cm": 5.63435864007737, "y_cm": -3.0762364034756513, "z_cm": 29.80768734595544, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.6, "found": true, "pixel_x": 196.0, "pixel_y": 92.1, "x_cm": 5.961682429996962, "y_cm": -2.9664967305292227, "z_cm": 30.905964541814583, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.6333334, "found": true, "pixel_x": 199.8, "pixel_y": 90.0, "x_cm": 6.394003144826285, "y_cm": -3.1953050430872314, "z_cm": 30.23808412554125, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.6666667, "found": true, "pixel_x": 197.2, "pixel_y": 90.6, "x_cm": 5.873870553840283, "y_cm": -3.039683252374693, "z_cm": 29.574554326109844, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.7, "found": false}
+{"timestamp": 1790000016.7333333, "found": true, "pixel_x": 196.5, "pixel_y": 89.5, "x_cm": 6.00918810791337, "y_cm": -3.323215355973049, "z_cm": 30.77907597493432, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.7666667, "found": true, "pixel_x": 196.5, "pixel_y": 91.5, "x_cm": 5.970167624100994, "y_cm": -3.010483821488667, "z_cm": 30.591239442447705, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.8, "found": true, "pixel_x": 198.4, "pixel_y": 90.0, "x_cm": 6.066750915409443, "y_cm": -3.141388590236007, "z_cm": 29.655410755743045, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.8333333, "found": true, "pixel_x": 198.3, "pixel_y": 90.1, "x_cm": 6.084563975654168, "y_cm": -3.1397369573182634, "z_cm": 29.83023976072909, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.8666666, "found": false}
+{"timestamp": 1790000016.9, "found": false}
+{"timestamp": 1790000016.9333334, "found": true, "pixel_x": 196.5, "pixel_y": 90.8, "x_cm": 5.627562895367472, "y_cm": -2.9423867785227813, "z_cm": 28.809954202219366, "z_source": "estimated_from_size"}
+{"timestamp": 1790000016.9666667, "found": false}
+{"timestamp": 1790000017.0, "found": true, "pixel_x": 196.2, "pixel_y": 89.8, "x_cm": 5.859694514182951, "y_cm": -3.2220464202058885, "z_cm": 30.23669690698384, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.0333333, "found": true, "pixel_x": 197.2, "pixel_y": 90.3, "x_cm": 6.009293291628641, "y_cm": -3.1598053087760767, "z_cm": 30.2725616591214, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.0666666, "found": true, "pixel_x": 198.8, "pixel_y": 91.4, "x_cm": 5.794349571098745, "y_cm": -2.7868335052206232, "z_cm": 28.07566490160688, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.1, "found": true, "pixel_x": 199.9, "pixel_y": 91.5, "x_cm": 6.208341437538516, "y_cm": -2.885438866933603, "z_cm": 29.251867252536226, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.1333334, "found": true, "pixel_x": 197.6, "pixel_y": 91.0, "x_cm": 6.014927769259589, "y_cm": -3.031561777354747, "z_cm": 29.985880675633112, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.1666667, "found": true, "pixel_x": 199.1, "pixel_y": 90.5, "x_cm": 6.274624968394543, "y_cm": -3.1174122567214675, "z_cm": 30.159900163965567, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.2, "found": true, "pixel_x": 197.4, "pixel_y": 91.7, "x_cm": 6.180420533637103, "y_cm": -3.0219073773670093, "z_cm": 30.926099415122273, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.2333333, "found": true, "pixel_x": 198.2, "pixel_y": 91.3, "x_cm": 6.131810756756144, "y_cm": -2.9976604996320337, "z_cm": 30.104906281426484, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.2666667, "found": true, "pixel_x": 196.5, "pixel_y": 91.0, "x_cm": 5.621375432262418, "y_cm": -2.906918048694859, "z_cm": 28.774443056486042, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.3, "found": true, "pixel_x": 200.1, "pixel_y": 92.3, "x_cm": 6.420838727220044, "y_cm": -2.8545884245629387, "z_cm": 30.173265484861137, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.3333333, "found": true, "pixel_x": 195.6, "pixel_y": 88.5, "x_cm": 5.900650824046746, "y_cm": -3.494324022644299, "z_cm": 30.94379488684952, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.3666666, "found": true, "pixel_x": 197.3, "pixel_y": 90.3, "x_cm": 5.91108716304292, "y_cm": -3.095381940397781, "z_cm": 29.685322443265783, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.4, "found": false}
+{"timestamp": 1790000017.4333334, "found": true, "pixel_x": 195.6, "pixel_y": 90.1, "x_cm": 5.7572476296983846, "y_cm": -3.173742499175865, "z_cm": 30.13729248386442, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.4666667, "found": true, "pixel_x": 195.7, "pixel_y": 89.6, "x_cm": 5.700091900342965, "y_cm": -3.2094975454833334, "z_cm": 29.78240461722014, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.5, "found": true, "pixel_x": 198.6, "pixel_y": 89.6, "x_cm": 6.26997165502403, "y_cm": -3.2822027352883447, "z_cm": 30.48038610607932, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.5333333, "found": true, "pixel_x": 198.4, "pixel_y": 88.0, "x_cm": 5.885077516128457, "y_cm": -3.306537642773733, "z_cm": 28.7274817484509, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.5666666, "found": false}
+{"timestamp": 1790000017.6, "found": false}
+{"timestamp": 1790000017.6333334, "found": true, "pixel_x": 199.3, "pixel_y": 91.6, "x_cm": 6.040675317815758, "y_cm": -2.8351612650291638, "z_cm": 28.879330960204776, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.6666667, "found": true, "pixel_x": 199.6, "pixel_y": 92.9, "x_cm": 6.289144218213185, "y_cm": -2.7396766735848304, "z_cm": 29.859190523938015, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.7, "found": false}
+{"timestamp": 1790000017.7333333, "found": true, "pixel_x": 197.9, "pixel_y": 89.7, "x_cm": 6.070606238454215, "y_cm": -3.2177409725915727, "z_cm": 30.02656883740002, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.7666667, "found": true, "pixel_x": 195.8, "pixel_y": 92.1, "x_cm": 5.653082856438955, "y_cm": -2.8288241469005175, "z_cm": 29.47032906021915, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.8, "found": false}
+{"timestamp": 1790000017.8333333, "found": true, "pixel_x": 197.6, "pixel_y": 92.1, "x_cm": 6.114230456801951, "y_cm": -2.923558756744838, "z_cm": 30.45418423172795, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.8666666, "found": false}
+{"timestamp": 1790000017.9, "found": true, "pixel_x": 198.8, "pixel_y": 90.1, "x_cm": 5.994483462675277, "y_cm": -3.0573867534291117, "z_cm": 29.0292970509976, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.9333334, "found": true, "pixel_x": 198.8, "pixel_y": 90.7, "x_cm": 6.009934546461246, "y_cm": -2.9749660507985167, "z_cm": 29.082376952813792, "z_source": "estimated_from_size"}
+{"timestamp": 1790000017.9666667, "found": true, "pixel_x": 196.8, "pixel_y": 94.4, "x_cm": 6.010270728504781, "y_cm": -2.5834527282004593, "z_cm": 30.515586915508543, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.0, "found": true, "pixel_x": 197.4, "pixel_y": 89.5, "x_cm": 5.738516838653841, "y_cm": -3.103390410486659, "z_cm": 28.766504984961056, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.0333333, "found": true, "pixel_x": 196.7, "pixel_y": 88.5, "x_cm": 5.650514833824684, "y_cm": -3.249023105522364, "z_cm": 28.781593753941458, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.0666666, "found": true, "pixel_x": 199.0, "pixel_y": 92.8, "x_cm": 6.342486719054908, "y_cm": -2.8223346087107424, "z_cm": 30.55013102931448, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.1, "found": false}
+{"timestamp": 1790000018.1333334, "found": true, "pixel_x": 195.6, "pixel_y": 92.6, "x_cm": 5.802176003934646, "y_cm": -2.8436892439027592, "z_cm": 30.371139815022275, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.1666667, "found": true, "pixel_x": 197.9, "pixel_y": 90.1, "x_cm": 5.878618646595917, "y_cm": -3.059277663895312, "z_cm": 29.090485561690837, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.2, "found": false}
+{"timestamp": 1790000018.2333333, "found": true, "pixel_x": 195.9, "pixel_y": 91.6, "x_cm": 5.509455708375964, "y_cm": -2.803545092291886, "z_cm": 28.616203107936332, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.2666667, "found": true, "pixel_x": 196.6, "pixel_y": 92.6, "x_cm": 5.805779344513881, "y_cm": -2.768726023708393, "z_cm": 29.65012847526819, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.3, "found": false}
+{"timestamp": 1790000018.3333333, "found": true, "pixel_x": 196.6, "pixel_y": 91.5, "x_cm": 5.814871438574636, "y_cm": -2.923187970643939, "z_cm": 29.676407067517495, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.3666666, "found": true, "pixel_x": 198.8, "pixel_y": 88.7, "x_cm": 6.083576744988747, "y_cm": -3.2871341812557104, "z_cm": 29.420415379056838, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.4, "found": true, "pixel_x": 198.5, "pixel_y": 92.6, "x_cm": 6.200438606759447, "y_cm": -2.8227705269830095, "z_cm": 30.26026037327227, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.4333334, "found": true, "pixel_x": 199.2, "pixel_y": 89.5, "x_cm": 6.62486414060148, "y_cm": -3.4390016643422103, "z_cm": 31.787496772919017, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.4666667, "found": true, "pixel_x": 196.7, "pixel_y": 90.6, "x_cm": 6.090520769104485, "y_cm": -3.191128993970368, "z_cm": 31.046303677185715, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.5, "found": true, "pixel_x": 196.0, "pixel_y": 90.5, "x_cm": 5.6835675888880015, "y_cm": -3.0386931890244706, "z_cm": 29.45202559274808, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.5333333, "found": false}
+{"timestamp": 1790000018.5666666, "found": false}
+{"timestamp": 1790000018.6, "found": true, "pixel_x": 196.2, "pixel_y": 92.1, "x_cm": 5.777851881960075, "y_cm": -2.8580640617024757, "z_cm": 29.837361365788173, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.6333334, "found": true, "pixel_x": 200.5, "pixel_y": 89.8, "x_cm": 6.36000937681769, "y_cm": -3.154665474528854, "z_cm": 29.557349637805714, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.6666667, "found": true, "pixel_x": 199.9, "pixel_y": 90.4, "x_cm": 6.1293643747539885, "y_cm": -3.0029418872110805, "z_cm": 28.916106314975174, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.7, "found": true, "pixel_x": 199.5, "pixel_y": 89.9, "x_cm": 6.3142513244344345, "y_cm": -3.1908321050436714, "z_cm": 30.092000352065703, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.7333333, "found": true, "pixel_x": 198.2, "pixel_y": 91.2, "x_cm": 5.694911044458691, "y_cm": -2.7885301034878585, "z_cm": 27.93317516080795, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.7666667, "found": true, "pixel_x": 196.5, "pixel_y": 92.2, "x_cm": 6.029475014568495, "y_cm": -2.9418476797688933, "z_cm": 30.8420506219706, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.8, "found": true, "pixel_x": 199.6, "pixel_y": 90.2, "x_cm": 6.383244761768228, "y_cm": -3.1751977140466483, "z_cm": 30.33115662680736, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.8333333, "found": true, "pixel_x": 197.8, "pixel_y": 89.6, "x_cm": 5.904630278065904, "y_cm": -3.149823755832011, "z_cm": 29.283540802439024, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.8666666, "found": true, "pixel_x": 197.1, "pixel_y": 90.5, "x_cm": 5.952439728514899, "y_cm": -3.1057897237338437, "z_cm": 30.01278054486339, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.9, "found": true, "pixel_x": 195.9, "pixel_y": 92.0, "x_cm": 5.760048652217694, "y_cm": -2.8859842696875457, "z_cm": 29.930294068213712, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.9333334, "found": true, "pixel_x": 195.7, "pixel_y": 89.3, "x_cm": 5.63935403182312, "y_cm": -3.2118794622112596, "z_cm": 29.460303759504487, "z_source": "estimated_from_size"}
+{"timestamp": 1790000018.9666667, "found": true, "pixel_x": 197.9, "pixel_y": 92.7, "x_cm": 5.8371581997258035, "y_cm": -2.68893555108154, "z_cm": 28.895874211447577, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.0, "found": false}
+{"timestamp": 1790000019.0333333, "found": true, "pixel_x": 196.1, "pixel_y": 92.6, "x_cm": 5.7091450576167215, "y_cm": -2.75420447943216, "z_cm": 29.503781211046533, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.0666666, "found": true, "pixel_x": 197.8, "pixel_y": 92.9, "x_cm": 5.856886783486003, "y_cm": -2.6756669777528046, "z_cm": 29.050063200220674, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.1, "found": true, "pixel_x": 198.5, "pixel_y": 91.7, "x_cm": 6.069351834726834, "y_cm": -2.8913411137088665, "z_cm": 29.569658175310153, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.1333334, "found": true, "pixel_x": 199.3, "pixel_y": 90.3, "x_cm": 5.916533362432278, "y_cm": -2.953246735086352, "z_cm": 28.328329039295834, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.1666667, "found": true, "pixel_x": 195.4, "pixel_y": 90.9, "x_cm": 5.4965670424746484, "y_cm": -2.932977344463399, "z_cm": 28.93484297194213, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.2, "found": true, "pixel_x": 197.4, "pixel_y": 94.1, "x_cm": 6.000179965348672, "y_cm": -2.5885211908967536, "z_cm": 30.044865086584373, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.2333333, "found": true, "pixel_x": 196.7, "pixel_y": 90.6, "x_cm": 5.495036866139201, "y_cm": -2.8802517167204775, "z_cm": 28.000171330660027, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.2666667, "found": true, "pixel_x": 199.2, "pixel_y": 89.6, "x_cm": 6.142240341897139, "y_cm": -3.174559025775514, "z_cm": 29.466909982424248, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.3, "found": true, "pixel_x": 200.5, "pixel_y": 90.0, "x_cm": 6.285360399451639, "y_cm": -3.088054306473401, "z_cm": 29.25363273962637, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.3333333, "found": true, "pixel_x": 196.2, "pixel_y": 91.1, "x_cm": 5.820034343523153, "y_cm": -3.0228407995416617, "z_cm": 30.004085739881738, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.3666666, "found": true, "pixel_x": 198.7, "pixel_y": 91.9, "x_cm": 6.211886985276085, "y_cm": -2.9185533374470864, "z_cm": 30.16067477045567, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.4, "found": true, "pixel_x": 200.0, "pixel_y": 91.5, "x_cm": 6.142517947151503, "y_cm": -2.8538211978586765, "z_cm": 28.909006952248422, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.4333334, "found": false}
+{"timestamp": 1790000019.4666667, "found": true, "pixel_x": 199.0, "pixel_y": 90.7, "x_cm": 6.190210297871447, "y_cm": -3.052004801302061, "z_cm": 29.826754536674613, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.5, "found": true, "pixel_x": 197.8, "pixel_y": 92.8, "x_cm": 5.977975490994602, "y_cm": -2.7494599676242393, "z_cm": 29.664128518778405, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.5333333, "found": true, "pixel_x": 197.4, "pixel_y": 91.6, "x_cm": 6.099360111131075, "y_cm": -3.001936913801373, "z_cm": 30.575318761189543, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.5666666, "found": true, "pixel_x": 197.7, "pixel_y": 90.2, "x_cm": 6.009391539162441, "y_cm": -3.1260288562454432, "z_cm": 29.875903525677337, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.6, "found": true, "pixel_x": 200.8, "pixel_y": 93.1, "x_cm": 6.357299055157498, "y_cm": -2.6785227291869824, "z_cm": 29.383788543223133, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.6333334, "found": true, "pixel_x": 201.1, "pixel_y": 91.6, "x_cm": 6.498993021145909, "y_cm": -2.934433952565859, "z_cm": 29.848086695461724, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.6666667, "found": true, "pixel_x": 198.2, "pixel_y": 93.2, "x_cm": 6.070751138132445, "y_cm": -2.698205020558029, "z_cm": 29.788565016150834, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.7, "found": true, "pixel_x": 196.4, "pixel_y": 92.1, "x_cm": 5.981722541106779, "y_cm": -2.9346946326450127, "z_cm": 30.674247649295005, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.7333333, "found": false}
+{"timestamp": 1790000019.7666667, "found": false}
+{"timestamp": 1790000019.8, "found": true, "pixel_x": 199.2, "pixel_y": 93.0, "x_cm": 6.412876428884739, "y_cm": -2.8216331914895365, "z_cm": 30.77670624219808, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.8333333, "found": true, "pixel_x": 195.7, "pixel_y": 91.3, "x_cm": 5.70982288412722, "y_cm": -2.975117475419992, "z_cm": 29.860855714760813, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.8666666, "found": true, "pixel_x": 196.7, "pixel_y": 90.5, "x_cm": 5.980335055518858, "y_cm": -3.145996212616128, "z_cm": 30.43904546963154, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.9, "found": true, "pixel_x": 200.0, "pixel_y": 88.2, "x_cm": 6.355462519726327, "y_cm": -3.4157969933427426, "z_cm": 29.87369547090073, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.9333334, "found": true, "pixel_x": 198.5, "pixel_y": 89.7, "x_cm": 6.134799497705598, "y_cm": -3.210677115109004, "z_cm": 29.90053521608251, "z_source": "estimated_from_size"}
+{"timestamp": 1790000019.9666667, "found": false}
+{"timestamp": 1790000020.0, "found": false}
+{"timestamp": 1790000020.0333333, "found": true, "pixel_x": 197.5, "pixel_y": 91.6, "x_cm": 6.00792137421399, "y_cm": -2.938213337066962, "z_cm": 29.989007906399703, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.0666666, "found": true, "pixel_x": 198.7, "pixel_y": 91.5, "x_cm": 6.1590470036666725, "y_cm": -2.9476304389520536, "z_cm": 29.90727623472803, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.1, "found": false}
+{"timestamp": 1790000020.1333334, "found": true, "pixel_x": 196.1, "pixel_y": 89.9, "x_cm": 5.5091907798061515, "y_cm": -3.023377898668434, "z_cm": 28.478220483032057, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.1666667, "found": true, "pixel_x": 196.7, "pixel_y": 89.3, "x_cm": 5.9487589381519586, "y_cm": -3.3072619389157802, "z_cm": 30.339928636103217, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.2, "found": true, "pixel_x": 195.4, "pixel_y": 91.1, "x_cm": 5.871885671749686, "y_cm": -3.105462772835909, "z_cm": 30.93472912030822, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.2333333, "found": false}
+{"timestamp": 1790000020.2666667, "found": false}
+{"timestamp": 1790000020.3, "found": true, "pixel_x": 197.7, "pixel_y": 92.0, "x_cm": 5.8447074060197615, "y_cm": -2.795380494053079, "z_cm": 29.07768979728045, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.3333333, "found": true, "pixel_x": 197.8, "pixel_y": 89.8, "x_cm": 5.7164350767985, "y_cm": -3.015411231300348, "z_cm": 28.319076818362156, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.3666666, "found": true, "pixel_x": 196.1, "pixel_y": 91.1, "x_cm": 5.638920528255386, "y_cm": -2.9330288525369923, "z_cm": 29.16103867995213, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.4, "found": false}
+{"timestamp": 1790000020.4333334, "found": true, "pixel_x": 199.8, "pixel_y": 90.3, "x_cm": 6.318739316955961, "y_cm": -3.1176979725995144, "z_cm": 29.85013837911653, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.4666667, "found": true, "pixel_x": 198.1, "pixel_y": 91.3, "x_cm": 5.609655046514466, "y_cm": -2.7454343469338216, "z_cm": 27.582563640370708, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.5, "found": false}
+{"timestamp": 1790000020.5333333, "found": true, "pixel_x": 196.8, "pixel_y": 91.3, "x_cm": 6.076073956211613, "y_cm": -3.08532674189768, "z_cm": 30.91194162495104, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.5666666, "found": false}
+{"timestamp": 1790000020.6, "found": true, "pixel_x": 198.3, "pixel_y": 90.8, "x_cm": 6.238138919659336, "y_cm": -3.111587204374909, "z_cm": 30.57012396469839, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.6333334, "found": true, "pixel_x": 197.0, "pixel_y": 90.3, "x_cm": 6.129459289192526, "y_cm": -3.2319858375267483, "z_cm": 31.028891723186607, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.6666667, "found": false}
+{"timestamp": 1790000020.7, "found": true, "pixel_x": 195.3, "pixel_y": 91.0, "x_cm": 5.52730384487344, "y_cm": -2.9482783717878003, "z_cm": 29.157539234361472, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.7333333, "found": true, "pixel_x": 198.1, "pixel_y": 89.4, "x_cm": 5.8285726828139905, "y_cm": -3.1120920148629234, "z_cm": 28.669051845453048, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.7666667, "found": true, "pixel_x": 198.1, "pixel_y": 88.4, "x_cm": 6.243602189770132, "y_cm": -3.4736509959384407, "z_cm": 30.715256610109567, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.8, "found": true, "pixel_x": 200.3, "pixel_y": 91.5, "x_cm": 6.151942035943761, "y_cm": -2.828926311029979, "z_cm": 28.720175284727446, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.8333333, "found": false}
+{"timestamp": 1790000020.8666666, "found": true, "pixel_x": 197.8, "pixel_y": 91.7, "x_cm": 6.282245592638289, "y_cm": -3.042306971756936, "z_cm": 31.171166499309138, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.9, "found": true, "pixel_x": 199.8, "pixel_y": 89.4, "x_cm": 6.551962935689498, "y_cm": -3.3727979489103093, "z_cm": 31.005824736387783, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.9333334, "found": true, "pixel_x": 196.8, "pixel_y": 87.5, "x_cm": 5.720116074655991, "y_cm": -3.416254159674408, "z_cm": 29.081559785690274, "z_source": "estimated_from_size"}
+{"timestamp": 1790000020.9666667, "found": true, "pixel_x": 197.1, "pixel_y": 94.3, "x_cm": 5.8710946019863615, "y_cm": -2.537467210375426, "z_cm": 29.651050540484746, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.0, "found": false}
+{"timestamp": 1790000021.0333333, "found": true, "pixel_x": 196.2, "pixel_y": 89.9, "x_cm": 5.706238140124207, "y_cm": -3.121220645648596, "z_cm": 29.438033965893514, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.0666666, "found": true, "pixel_x": 197.1, "pixel_y": 93.6, "x_cm": 5.755424972294123, "y_cm": -2.57689733178285, "z_cm": 29.039030561222916, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.1, "found": true, "pixel_x": 198.6, "pixel_y": 91.8, "x_cm": 5.865596996138066, "y_cm": -2.774165380073219, "z_cm": 28.5509488219018, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.1333334, "found": true, "pixel_x": 200.6, "pixel_y": 89.7, "x_cm": 6.456947628995566, "y_cm": -3.220914137632399, "z_cm": 29.996596911176933, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.1666667, "found": true, "pixel_x": 197.3, "pixel_y": 91.9, "x_cm": 5.682181326043416, "y_cm": -2.7676282325302193, "z_cm": 28.555240703901955, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.2, "found": true, "pixel_x": 197.8, "pixel_y": 90.5, "x_cm": 6.1341940771851675, "y_cm": -3.139482011986214, "z_cm": 30.431924145106393, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.2333333, "found": true, "pixel_x": 197.9, "pixel_y": 88.5, "x_cm": 5.993903900238814, "y_cm": -3.3512236389990524, "z_cm": 29.67566133421643, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.2666667, "found": true, "pixel_x": 196.8, "pixel_y": 89.6, "x_cm": 6.103221464432076, "y_cm": -3.3453658348921222, "z_cm": 31.03331292635615, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.3, "found": true, "pixel_x": 195.8, "pixel_y": 93.4, "x_cm": 5.605708057351266, "y_cm": -2.6193376023756576, "z_cm": 29.256438923634526, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.3333333, "found": true, "pixel_x": 196.0, "pixel_y": 92.6, "x_cm": 5.46753926502807, "y_cm": -2.6404939275192127, "z_cm": 28.333105191056347, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.3666666, "found": true, "pixel_x": 197.3, "pixel_y": 92.7, "x_cm": 5.876280511422877, "y_cm": -2.7455873633356958, "z_cm": 29.481324393060664, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.4, "found": false}
+{"timestamp": 1790000021.4333334, "found": false}
+{"timestamp": 1790000021.4666667, "found": true, "pixel_x": 195.9, "pixel_y": 94.2, "x_cm": 5.849980941786754, "y_cm": -2.6074453619905755, "z_cm": 30.42438282357419, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.5, "found": true, "pixel_x": 197.6, "pixel_y": 90.9, "x_cm": 5.654291826993053, "y_cm": -2.8637928559836063, "z_cm": 28.186676245630665, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.5333333, "found": false}
+{"timestamp": 1790000021.5666666, "found": true, "pixel_x": 198.7, "pixel_y": 93.5, "x_cm": 6.142082009592723, "y_cm": -2.6643910393336587, "z_cm": 29.82735200182995, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.6, "found": true, "pixel_x": 198.5, "pixel_y": 90.6, "x_cm": 6.100195248536818, "y_cm": -3.0511167307094778, "z_cm": 29.70433925529672, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.6333334, "found": true, "pixel_x": 196.4, "pixel_y": 92.9, "x_cm": 6.044180993902489, "y_cm": -2.8544690043125294, "z_cm": 31.034559996642262, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.6666667, "found": true, "pixel_x": 199.2, "pixel_y": 90.9, "x_cm": 6.352946866294986, "y_cm": -3.084358129974323, "z_cm": 30.456461328540612, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.7, "found": true, "pixel_x": 198.5, "pixel_y": 92.2, "x_cm": 6.053115566368821, "y_cm": -2.8142862842355507, "z_cm": 29.523268022029143, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.7333333, "found": true, "pixel_x": 196.9, "pixel_y": 91.4, "x_cm": 6.160948933273778, "y_cm": -3.0878550323252227, "z_cm": 31.209097251560188, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.7666667, "found": true, "pixel_x": 198.0, "pixel_y": 90.5, "x_cm": 5.834742643599968, "y_cm": -2.9816482632567083, "z_cm": 28.79012098460103, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.8, "found": true, "pixel_x": 193.5, "pixel_y": 91.1, "x_cm": 5.619897236392035, "y_cm": -3.1201885067828656, "z_cm": 31.100623200009956, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.8333333, "found": true, "pixel_x": 201.5, "pixel_y": 90.3, "x_cm": 6.53380439122721, "y_cm": -3.098351362710034, "z_cm": 29.706928475099772, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.8666666, "found": true, "pixel_x": 198.3, "pixel_y": 92.0, "x_cm": 5.85593686018932, "y_cm": -2.7547431598275374, "z_cm": 28.68777515695262, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.9, "found": true, "pixel_x": 200.1, "pixel_y": 89.7, "x_cm": 6.294872448790744, "y_cm": -3.1668203178614265, "z_cm": 29.531720429232095, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.9333334, "found": true, "pixel_x": 198.8, "pixel_y": 89.7, "x_cm": 6.286612913504061, "y_cm": -3.261291796958892, "z_cm": 30.398463917064948, "z_source": "estimated_from_size"}
+{"timestamp": 1790000021.9666667, "found": true, "pixel_x": 197.7, "pixel_y": 92.8, "x_cm": 6.224832463746191, "y_cm": -2.860983503827938, "z_cm": 30.94571115794334, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.0, "found": true, "pixel_x": 198.7, "pixel_y": 91.9, "x_cm": 6.051468386447331, "y_cm": -2.838260159376228, "z_cm": 29.369869787883996, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.0333333, "found": false}
+{"timestamp": 1790000022.0666666, "found": false}
+{"timestamp": 1790000022.1, "found": true, "pixel_x": 198.6, "pixel_y": 93.8, "x_cm": 6.485879362323385, "y_cm": -2.7701658511344887, "z_cm": 31.530764971896907, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.1333334, "found": true, "pixel_x": 197.4, "pixel_y": 90.7, "x_cm": 6.116627384425935, "y_cm": -3.1442793852584368, "z_cm": 30.644258798762976, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.1666667, "found": true, "pixel_x": 197.2, "pixel_y": 90.1, "x_cm": 5.831295475615819, "y_cm": -3.095950266830641, "z_cm": 29.34618246668144, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.2, "found": true, "pixel_x": 199.9, "pixel_y": 91.5, "x_cm": 6.361554700985321, "y_cm": -2.959294480425897, "z_cm": 29.990266847077628, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.2333333, "found": true, "pixel_x": 196.6, "pixel_y": 89.4, "x_cm": 5.921291152850458, "y_cm": -3.2871706698047287, "z_cm": 30.2555506038796, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.2666667, "found": true, "pixel_x": 197.5, "pixel_y": 89.0, "x_cm": 6.007834262436162, "y_cm": -3.3207722458637736, "z_cm": 30.006175210136632, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.3, "found": true, "pixel_x": 198.0, "pixel_y": 93.9, "x_cm": 5.926449443483944, "y_cm": -2.553635191715935, "z_cm": 29.235470845055325, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.3333333, "found": true, "pixel_x": 195.3, "pixel_y": 89.0, "x_cm": 5.936170939662333, "y_cm": -3.4665819702981904, "z_cm": 31.32322175321557, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.3666666, "found": true, "pixel_x": 196.6, "pixel_y": 91.2, "x_cm": 5.940008267975949, "y_cm": -3.0375556960068097, "z_cm": 30.325815821710265, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.4, "found": false}
+{"timestamp": 1790000022.4333334, "found": true, "pixel_x": 196.7, "pixel_y": 90.6, "x_cm": 5.991007269592309, "y_cm": -3.141918711349464, "z_cm": 30.493921817906564, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.4666667, "found": false}
+{"timestamp": 1790000022.5, "found": true, "pixel_x": 196.1, "pixel_y": 89.0, "x_cm": 5.998574803051429, "y_cm": -3.4310620120754396, "z_cm": 31.056282270882843, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.5333333, "found": true, "pixel_x": 201.6, "pixel_y": 89.6, "x_cm": 6.387289368421853, "y_cm": -3.1189685119969957, "z_cm": 28.96280750814601, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.5666666, "found": true, "pixel_x": 196.1, "pixel_y": 90.7, "x_cm": 5.796970430773889, "y_cm": -3.074956191509516, "z_cm": 29.976980168054766, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.6, "found": true, "pixel_x": 200.7, "pixel_y": 88.2, "x_cm": 6.354046608070134, "y_cm": -3.3613513174010703, "z_cm": 29.442586747651152, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.6333334, "found": false}
+{"timestamp": 1790000022.6666667, "found": false}
+{"timestamp": 1790000022.7, "found": true, "pixel_x": 199.1, "pixel_y": 91.3, "x_cm": 6.118286981013348, "y_cm": -2.9271287924640617, "z_cm": 29.41159613947054, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.7333333, "found": true, "pixel_x": 194.7, "pixel_y": 93.3, "x_cm": 5.204389368117612, "y_cm": -2.514113938430344, "z_cm": 27.905305390690625, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.7666667, "found": true, "pixel_x": 199.3, "pixel_y": 89.0, "x_cm": 6.244930649134012, "y_cm": -3.30502435425741, "z_cm": 29.875861463681108, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.8, "found": true, "pixel_x": 196.9, "pixel_y": 92.5, "x_cm": 6.012613048505953, "y_cm": -2.8580258267376353, "z_cm": 30.491681354901974, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.8333333, "found": true, "pixel_x": 194.9, "pixel_y": 90.8, "x_cm": 5.565009100093448, "y_cm": -3.02090038705272, "z_cm": 29.69349893430328, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.8666666, "found": true, "pixel_x": 196.7, "pixel_y": 93.9, "x_cm": 6.056601646186112, "y_cm": -2.691487073695108, "z_cm": 30.86839932275112, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.9, "found": true, "pixel_x": 196.6, "pixel_y": 92.9, "x_cm": 5.483500579963172, "y_cm": -2.5821597440538904, "z_cm": 28.041713792293546, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.9333334, "found": true, "pixel_x": 196.7, "pixel_y": 90.4, "x_cm": 5.664933814237791, "y_cm": -2.9923561187372902, "z_cm": 28.869408546546016, "z_source": "estimated_from_size"}
+{"timestamp": 1790000022.9666667, "found": true, "pixel_x": 200.0, "pixel_y": 93.2, "x_cm": 6.306947961268604, "y_cm": -2.689832205063506, "z_cm": 29.710733238189594, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.0, "found": true, "pixel_x": 198.9, "pixel_y": 93.4, "x_cm": 6.361488565677117, "y_cm": -2.7511663559517254, "z_cm": 30.72036481499227, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.0333333, "found": true, "pixel_x": 197.2, "pixel_y": 89.9, "x_cm": 5.8995875440220304, "y_cm": -3.1484185635968838, "z_cm": 29.682498518905916, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.0666666, "found": false}
+{"timestamp": 1790000023.1, "found": false}
+{"timestamp": 1790000023.1333334, "found": false}
+{"timestamp": 1790000023.1666667, "found": true, "pixel_x": 199.9, "pixel_y": 94.0, "x_cm": 6.2014458149053, "y_cm": -2.5314433262340366, "z_cm": 29.214334313006045, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.2, "found": false}
+{"timestamp": 1790000023.2333333, "found": true, "pixel_x": 197.7, "pixel_y": 91.5, "x_cm": 6.179185357606355, "y_cm": -3.031711110812899, "z_cm": 30.748160339704498, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.2666667, "found": true, "pixel_x": 197.9, "pixel_y": 90.6, "x_cm": 6.215490301333839, "y_cm": -3.1618974563780737, "z_cm": 30.731635231985717, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.3, "found": false}
+{"timestamp": 1790000023.3333333, "found": false}
+{"timestamp": 1790000023.3666666, "found": true, "pixel_x": 197.8, "pixel_y": 90.6, "x_cm": 5.976455726630844, "y_cm": -3.047502519553796, "z_cm": 29.66079159301813, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.4, "found": true, "pixel_x": 196.8, "pixel_y": 90.5, "x_cm": 5.726879451664196, "y_cm": -3.014128857100578, "z_cm": 29.130990399032594, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.4333334, "found": true, "pixel_x": 199.7, "pixel_y": 88.5, "x_cm": 6.35660103751019, "y_cm": -3.392987443842218, "z_cm": 30.11960370721214, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.4666667, "found": true, "pixel_x": 198.0, "pixel_y": 90.4, "x_cm": 6.130192343171099, "y_cm": -3.138368175099282, "z_cm": 30.227430776188417, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.5, "found": false}
+{"timestamp": 1790000023.5333333, "found": false}
+{"timestamp": 1790000023.5666666, "found": true, "pixel_x": 199.8, "pixel_y": 92.6, "x_cm": 6.40174975044114, "y_cm": -2.831999740488075, "z_cm": 30.282294937672933, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.6, "found": true, "pixel_x": 196.7, "pixel_y": 92.8, "x_cm": 5.875691269205642, "y_cm": -2.774716925221887, "z_cm": 29.96361722798165, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.6333334, "found": true, "pixel_x": 197.2, "pixel_y": 89.9, "x_cm": 5.8846422128369875, "y_cm": -3.1397880514935648, "z_cm": 29.60496472367355, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.6666667, "found": true, "pixel_x": 197.8, "pixel_y": 90.2, "x_cm": 6.731468069386325, "y_cm": -3.488150588907486, "z_cm": 33.35768767008898, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.7, "found": true, "pixel_x": 194.9, "pixel_y": 91.4, "x_cm": 5.403048603320384, "y_cm": -2.849038541274474, "z_cm": 28.815277750459792, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.7333333, "found": true, "pixel_x": 197.2, "pixel_y": 90.8, "x_cm": 5.937439998543474, "y_cm": -3.045323243801606, "z_cm": 29.88874873390962, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.7666667, "found": true, "pixel_x": 196.9, "pixel_y": 89.7, "x_cm": 5.673521621331958, "y_cm": -3.0834049013881346, "z_cm": 28.76837764994514, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.8, "found": true, "pixel_x": 199.2, "pixel_y": 90.7, "x_cm": 6.197445755050689, "y_cm": -3.041839447498314, "z_cm": 29.709027308293695, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.8333333, "found": false}
+{"timestamp": 1790000023.8666666, "found": true, "pixel_x": 199.0, "pixel_y": 91.4, "x_cm": 6.306803869252602, "y_cm": -3.00401026240494, "z_cm": 30.372870928745826, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.9, "found": true, "pixel_x": 200.3, "pixel_y": 90.7, "x_cm": 6.420234794471502, "y_cm": -3.080967609347569, "z_cm": 30.028633706668014, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.9333334, "found": true, "pixel_x": 199.4, "pixel_y": 91.9, "x_cm": 6.31359186802119, "y_cm": -2.9164974970570885, "z_cm": 30.125246394580454, "z_source": "estimated_from_size"}
+{"timestamp": 1790000023.9666667, "found": true, "pixel_x": 198.4, "pixel_y": 91.9, "x_cm": 6.117267694214821, "y_cm": -2.894051999222959, "z_cm": 29.92230281209427, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.0, "found": true, "pixel_x": 195.8, "pixel_y": 91.7, "x_cm": 5.641177350284193, "y_cm": -2.8760715409455475, "z_cm": 29.433362746652918, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.0333333, "found": true, "pixel_x": 196.0, "pixel_y": 88.9, "x_cm": 5.797796682833627, "y_cm": -3.3326874174263392, "z_cm": 30.06134862651606, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.0666666, "found": false}
+{"timestamp": 1790000024.1, "found": true, "pixel_x": 199.5, "pixel_y": 95.3, "x_cm": 6.09660425409231, "y_cm": -2.3360476254946585, "z_cm": 29.023513570851872, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.1333334, "found": true, "pixel_x": 196.5, "pixel_y": 85.9, "x_cm": 5.911303070179583, "y_cm": -3.7924796436329813, "z_cm": 30.301234495377738, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.1666667, "found": true, "pixel_x": 199.2, "pixel_y": 92.0, "x_cm": 6.107611974906015, "y_cm": -2.8171655317293762, "z_cm": 29.26641563680151, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.2, "found": true, "pixel_x": 198.8, "pixel_y": 93.3, "x_cm": 6.3438833772763505, "y_cm": -2.7755890265758008, "z_cm": 30.732864822922316, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.2333333, "found": true, "pixel_x": 195.7, "pixel_y": 93.5, "x_cm": 5.4853678424277765, "y_cm": -2.5552877631185082, "z_cm": 28.679924675832265, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.2666667, "found": true, "pixel_x": 196.0, "pixel_y": 91.3, "x_cm": 5.775861894395908, "y_cm": -2.9792403512635772, "z_cm": 29.978506909749463, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.3, "found": true, "pixel_x": 197.5, "pixel_y": 91.9, "x_cm": 6.028462224321888, "y_cm": -2.919077378686389, "z_cm": 30.121168728019672, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.3333333, "found": false}
+{"timestamp": 1790000024.3666666, "found": true, "pixel_x": 197.3, "pixel_y": 90.9, "x_cm": 6.013250324214073, "y_cm": -3.058587604591519, "z_cm": 30.16215741723488, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.4, "found": true, "pixel_x": 197.4, "pixel_y": 91.5, "x_cm": 6.009458785418106, "y_cm": -2.9670785514298754, "z_cm": 30.118989898462843, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.4333334, "found": false}
+{"timestamp": 1790000024.4666667, "found": true, "pixel_x": 196.2, "pixel_y": 92.1, "x_cm": 5.696718063004762, "y_cm": -2.816776702614711, "z_cm": 29.409184240760567, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.5, "found": true, "pixel_x": 196.4, "pixel_y": 90.3, "x_cm": 5.934990268339442, "y_cm": -3.180846185674014, "z_cm": 30.507109181476554, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.5333333, "found": false}
+{"timestamp": 1790000024.5666666, "found": true, "pixel_x": 197.4, "pixel_y": 91.7, "x_cm": 6.02339573273475, "y_cm": -2.9509674759739024, "z_cm": 30.15311733765834, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.6, "found": true, "pixel_x": 196.6, "pixel_y": 91.0, "x_cm": 5.736590145353546, "y_cm": -2.9505458298066527, "z_cm": 29.27191053462695, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.6333334, "found": true, "pixel_x": 197.1, "pixel_y": 89.5, "x_cm": 5.870447639658233, "y_cm": -3.2096403355675722, "z_cm": 29.6261623307269, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.6666667, "found": true, "pixel_x": 197.4, "pixel_y": 89.9, "x_cm": 5.849913998412111, "y_cm": -3.1087157025568732, "z_cm": 29.305125784995415, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.7, "found": true, "pixel_x": 197.3, "pixel_y": 91.6, "x_cm": 5.868370663653653, "y_cm": -2.891987276798783, "z_cm": 29.44570186608851, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.7333333, "found": true, "pixel_x": 198.0, "pixel_y": 90.0, "x_cm": 5.791805330502764, "y_cm": -3.0220769171335657, "z_cm": 28.60886414213412, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.7666667, "found": true, "pixel_x": 196.6, "pixel_y": 90.8, "x_cm": 5.80041494789183, "y_cm": -3.0268015493856852, "z_cm": 29.627090190389776, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.8, "found": false}
+{"timestamp": 1790000024.8333333, "found": true, "pixel_x": 195.7, "pixel_y": 90.7, "x_cm": 5.5748405517794035, "y_cm": -2.975273668498566, "z_cm": 29.109035176540683, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.8666666, "found": true, "pixel_x": 198.8, "pixel_y": 91.5, "x_cm": 5.948819562449785, "y_cm": -2.8390784812377325, "z_cm": 28.77196639863086, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.9, "found": true, "pixel_x": 200.3, "pixel_y": 92.7, "x_cm": 6.38849763928163, "y_cm": -2.775690342357723, "z_cm": 29.875364321620225, "z_source": "estimated_from_size"}
+{"timestamp": 1790000024.9333334, "found": false}
+{"timestamp": 1790000024.9666667, "found": true, "pixel_x": 198.2, "pixel_y": 91.4, "x_cm": 6.209175503357201, "y_cm": -3.022350728417307, "z_cm": 30.472006446970532, "z_source": "estimated_from_size"}

@@ -1,0 +1,148 @@
+{
+  "as_measured": {
+    "one_at_a_time": [
+      {
+        "error": "L2 +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.27
+      },
+      {
+        "error": "L3 +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.5
+      },
+      {
+        "error": "grip_reach +1.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 1.5
+      },
+      {
+        "error": "m2_rise +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.5
+      },
+      {
+        "error": "base_height +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.5
+      },
+      {
+        "error": "cam_pitch +5 deg",
+        "delivered": true,
+        "grasp_error_cm": 1.97
+      },
+      {
+        "error": "cam_along +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.37
+      },
+      {
+        "error": "cam_perp +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.38
+      },
+      {
+        "error": "m3_rel_at_mean +5 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.97
+      },
+      {
+        "error": "M1 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.03
+      },
+      {
+        "error": "M2 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.86
+      },
+      {
+        "error": "M3 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.42
+      }
+    ],
+    "monte_carlo_mismatch": {
+      "runs": 40,
+      "grasp_within_tol": 31,
+      "tol_cm": 2.0,
+      "grasp_error_median_cm": 1.21,
+      "grasp_error_p90_cm": 2.52,
+      "grasp_error_max_cm": 3.46,
+      "assumed_1sigma": "lengths +-0.3 cm (grip_reach +-0.8), camera pitch +-3 deg, M3 offset +-2 deg, servo zero +-1.5 deg"
+    }
+  },
+  "camera_forward": {
+    "one_at_a_time": [
+      {
+        "error": "L2 +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.24
+      },
+      {
+        "error": "L3 +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.5
+      },
+      {
+        "error": "grip_reach +1.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 1.5
+      },
+      {
+        "error": "m2_rise +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.51
+      },
+      {
+        "error": "base_height +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.51
+      },
+      {
+        "error": "cam_pitch +5 deg",
+        "delivered": true,
+        "grasp_error_cm": 1.68
+      },
+      {
+        "error": "cam_along +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.37
+      },
+      {
+        "error": "cam_perp +0.5 cm",
+        "delivered": true,
+        "grasp_error_cm": 0.38
+      },
+      {
+        "error": "m3_rel_at_mean +5 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.97
+      },
+      {
+        "error": "M1 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.09
+      },
+      {
+        "error": "M2 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.86
+      },
+      {
+        "error": "M3 servo zero offset +2 deg",
+        "delivered": true,
+        "grasp_error_cm": 0.41
+      }
+    ],
+    "monte_carlo_mismatch": {
+      "runs": 40,
+      "grasp_within_tol": 32,
+      "tol_cm": 2.0,
+      "grasp_error_median_cm": 1.12,
+      "grasp_error_p90_cm": 2.49,
+      "grasp_error_max_cm": 3.31,
+      "assumed_1sigma": "lengths +-0.3 cm (grip_reach +-0.8), camera pitch +-3 deg, M3 offset +-2 deg, servo zero +-1.5 deg"
+    }
+  }
+}

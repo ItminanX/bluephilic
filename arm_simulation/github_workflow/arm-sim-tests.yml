@@ -1,0 +1,21 @@
+# Copy to <repo root>/.github/workflows/arm-sim-tests.yml - runs the simulation tests on every push that touches arm_simulation/
+name: arm-sim-tests
+on:
+  push:
+    paths: ["arm_simulation/**"]
+  pull_request:
+    paths: ["arm_simulation/**"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: arm_simulation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-sim.txt
+      - run: python test_model.py
+      - run: python test_bridge.py
