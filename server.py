@@ -15,25 +15,37 @@ Test without any hardware at all:
 Watch it live in a browser while tuning:
     http://localhost:8000/debug_feed
 """
+import json
 import time
 import threading
 from typing import Optional
 
 import cv2
 import numpy as np
-from fastapi import FastAPI, UploadFile, Form
+from fastapi import FastAPI, UploadFile, Form, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from vision_pipeline import (
-    BlackBeamDetector, BeamTracker, DetectorConfig,
-    CameraIntrinsics, project_to_3d, Detection,
+    BlackBeamDetector, DetectorConfig,
+    CameraIntrinsics, project_to_3d, estimate_depth_from_size, Detection,
 )
 
 app = FastAPI()
 
+# Measure your actual object's longest side in cm and set this accurately —
+# it's what the camera-only depth estimate is calibrated against. If you
+# later add a real depth sensor (VL53L0X via a relay MCU, etc.), send a
+# real depth_cm > 0 in the request and it will be trusted over this
+# estimate automatically — no other code changes needed.
+OBJECT_SIZE_CM = 5.0
+
 _config = DetectorConfig()
 _detector = BlackBeamDetector(_config)
-_tracker = BeamTracker(_detector)
+# NOTE: deliberately NOT using BeamTracker (CSRT) here — measured at
+# ~97ms/frame vs. ~0.6ms/frame for plain detection. CSRT is built for
+# tracking complex, textured objects; for a simple color-blob detector
+# like this one, it's pure overhead with no accuracy benefit. Plain
+# per-frame detection is both faster and simpler.
 _intrinsics: Optional[CameraIntrinsics] = None
 
 _lock = threading.Lock()
@@ -50,40 +62,45 @@ except Exception:
     print("[server] no calibration.npz yet — using FOV guess until you calibrate")
 
 
-@app.post("/ingest")
-async def ingest(frame: UploadFile, depth_cm: float = Form(...)):
+def process_frame(raw: bytes, depth_cm: float = -1.0):
+    """Decode a JPEG, detect the object, estimate 3D position, update the
+    shared debug state. Returns (result_dict, ok). Shared by the HTTP
+    /ingest endpoint and the WebSocket /ws endpoint."""
     global _intrinsics
 
-    raw = await frame.read()
-    img_array = np.frombuffer(raw, dtype=np.uint8)
-    img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+    img = cv2.imdecode(np.frombuffer(raw, dtype=np.uint8), cv2.IMREAD_COLOR)
     if img is None:
-        return JSONResponse({"error": "could not decode frame"}, status_code=400)
+        return {"error": "could not decode frame"}, False
 
     if _intrinsics is None:
         h, w = img.shape[:2]
         _intrinsics = CameraIntrinsics.guess_for_resolution(w, h)
 
-    det: Optional[Detection] = _tracker.update(img)
+    det: Optional[Detection] = _detector.find(img)
     result = {"timestamp": time.time(), "found": det is not None}
 
     display = img.copy()
-    if det is not None and depth_cm > 0:
-        pos = project_to_3d(det.pixel_x, det.pixel_y, depth_cm, _intrinsics)
+    if det is not None:
+        # A real sensor reading (> 0) is trusted; otherwise fall back to
+        # the camera-only known-size estimate. This is what lets you plug
+        # a real depth sensor back in later with zero code changes here.
+        used_real_sensor = depth_cm > 0
+        z_cm = depth_cm if used_real_sensor else estimate_depth_from_size(det, _intrinsics, OBJECT_SIZE_CM)
+
+        pos = project_to_3d(det.pixel_x, det.pixel_y, z_cm, _intrinsics)
         result.update({
             "pixel_x": det.pixel_x, "pixel_y": det.pixel_y,
             "angle_deg": det.angle_deg,
             "x_cm": pos.x_cm, "y_cm": pos.y_cm, "z_cm": pos.z_cm,
+            "z_source": "sensor" if used_real_sensor else "estimated_from_size",
         })
         box = det.box.astype(int)
         cv2.drawContours(display, [box], 0, (0, 255, 0), 2)
         cv2.circle(display, (int(det.pixel_x), int(det.pixel_y)), 5, (0, 0, 255), -1)
-        label = f"X={pos.x_cm:.1f} Y={pos.y_cm:.1f} Z={pos.z_cm:.1f}cm"
+        label = f"X={pos.x_cm:.1f} Y={pos.y_cm:.1f} Z~{pos.z_cm:.1f}cm"
         cv2.putText(display, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
     else:
-        note = "no beam detected" if det is None else "invalid depth reading"
-        result["found"] = False
-        cv2.putText(display, note, (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        cv2.putText(display, "no object detected", (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
 
     ok, jpeg = cv2.imencode(".jpg", display)
     with _lock:
@@ -91,7 +108,34 @@ async def ingest(frame: UploadFile, depth_cm: float = Form(...)):
         _state["last_detection"] = result
         _state["last_update_ts"] = time.time()
 
+    return result, True
+
+
+@app.post("/ingest")
+async def ingest(frame: UploadFile, depth_cm: float = Form(-1.0)):
+    """HTTP fallback: one frame per request. Slow over the internet
+    because every request pays connection + round-trip cost — prefer
+    the /ws WebSocket endpoint for real-time streaming."""
+    raw = await frame.read()
+    result, ok = process_frame(raw, depth_cm)
+    if not ok:
+        return JSONResponse(result, status_code=400)
     return JSONResponse(result)
+
+
+@app.websocket("/ws")
+async def ws_ingest(websocket: WebSocket):
+    """Persistent connection: the ESP32 connects once and streams raw JPEG
+    frames as binary messages, with no per-frame handshake or waiting on
+    a reply. Each frame gets a small JSON result sent back."""
+    await websocket.accept()
+    try:
+        while True:
+            raw = await websocket.receive_bytes()
+            result, ok = process_frame(raw)
+            await websocket.send_text(json.dumps(result))
+    except WebSocketDisconnect:
+        pass
 
 
 @app.get("/latest")
@@ -122,6 +166,6 @@ def debug_feed():
 def root():
     return {
         "status": "ok",
-        "endpoints": ["/ingest (POST, multipart: frame + depth_cm)", "/latest (GET)", "/debug_feed (GET, MJPEG)"],
+        "endpoints": ["/ws (WebSocket, binary JPEG frames)", "/ingest (POST, multipart fallback)", "/latest (GET)", "/debug_feed (GET, MJPEG)"],
         "calibrated": _intrinsics is not None,
     }

@@ -211,6 +211,25 @@ def project_to_3d(u: float, v: float, z_cm: float, intr: CameraIntrinsics) -> Po
     return Position3D(x_cm=x, y_cm=y, z_cm=z_cm)
 
 
+def estimate_depth_from_size(det: Detection, intr: CameraIntrinsics, real_size_cm: float) -> float:
+    """
+    Approximates distance from a single camera using the object's known
+    real-world size vs. how large it appears in pixels (pinhole model):
+
+        z_cm = (real_size_cm * focal_length_px) / apparent_size_px
+
+    This is NOT as accurate as a real depth sensor (VL53L0X) — it assumes
+    you've measured real_size_cm correctly, that the object is roughly
+    perpendicular to the camera, and it degrades if the object rotates
+    (apparent size changes with viewing angle, not just distance). Good
+    enough for rough "how far," not for precision grasping. Swap back to
+    a real sensor reading later without any other code changes — see
+    project_to_3d's depth_cm parameter, which this is just a fallback for.
+    """
+    apparent_px = max(det.width_px, 1e-6)  # guard divide-by-zero
+    return (real_size_cm * intr.fx) / apparent_px
+
+
 # ---------------------------------------------------------------------------
 # Standalone runner
 # ---------------------------------------------------------------------------
@@ -241,7 +260,7 @@ def frame_source(source: str):
         cap.release()
 
 
-def run_standalone(source: str, tune: bool, fake_depth_cm: float):
+def run_standalone(source: str, tune: bool, object_size_cm: float):
     config = DetectorConfig()
     detector = BlackBeamDetector(config)
     tracker = BeamTracker(detector)
@@ -275,7 +294,8 @@ def run_standalone(source: str, tune: bool, fake_depth_cm: float):
             box = det.box.astype(int)
             cv2.drawContours(display, [box], 0, (0, 255, 0), 2)
             cv2.circle(display, (int(det.pixel_x), int(det.pixel_y)), 5, (0, 0, 255), -1)
-            pos = project_to_3d(det.pixel_x, det.pixel_y, fake_depth_cm, intr)
+            pos = project_to_3d(det.pixel_x, det.pixel_y,
+                                 estimate_depth_from_size(det, intr, object_size_cm), intr)
             label = f"X={pos.x_cm:.1f}cm Y={pos.y_cm:.1f}cm Z={pos.z_cm:.1f}cm angle={det.angle_deg:.0f}"
             cv2.putText(display, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
         else:
@@ -292,7 +312,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", default="0", help="webcam index, video file path, or MJPEG stream URL")
     parser.add_argument("--tune", action="store_true", help="open HSV trackbars for live threshold tuning")
-    parser.add_argument("--fake-depth", type=float, default=30.0,
-                         help="cm — stand-in Z value while testing without the VL53L0X wired")
+    parser.add_argument("--object-size-cm", type=float, default=5.0,
+                         help="cm — the real-world size (longest side) of your tracked object, "
+                              "used to estimate distance from apparent pixel size. Measure your "
+                              "actual object and pass this accurately, or Z will be wrong.")
     args = parser.parse_args()
-    run_standalone(args.source, args.tune, args.fake_depth)
+    run_standalone(args.source, args.tune, args.object_size_cm)
