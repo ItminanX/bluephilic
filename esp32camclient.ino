@@ -131,7 +131,8 @@ void loop() {
     if (millis() - lastReconnectAttempt > 2000) {
       lastReconnectAttempt = millis();
       Serial.println("Connecting WebSocket...");
-      wsClient.connect(WS_URL);
+      bool connected = wsClient.connect(WS_URL);
+      Serial.println(connected ? "connect() returned OK" : "connect() FAILED");
     }
     delay(10);
     return;
