@@ -19,3 +19,4 @@ jobs:
       - run: pip install -r requirements-sim.txt
       - run: python test_model.py
       - run: python test_bridge.py
+      - run: python test_viewer.py

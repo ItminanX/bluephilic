@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Arm 3D viewer</title>
+<style>
+  :root { --bg:#0e1320; --panel:#171d2e; --line:#2b3552; --text:#e8ebf5; --dim:#97a1c0; --acc:#4da3ff; --ok:#46d38a; --warn:#ffb54d; --bad:#ff6b6b; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--text); font:14px system-ui,"Segoe UI",Arial,sans-serif; overflow:hidden; }
+  canvas#main { position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab; }
+  canvas#main.drag { cursor:grabbing; }
+  .panel { position:absolute; background:rgba(23,29,46,.93); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  #hud { left:12px; top:12px; width:290px; }
+  #ctl { right:12px; top:12px; width:290px; max-height:calc(100% - 24px); overflow:auto; }
+  #inset { left:12px; bottom:12px; padding:6px 6px 4px; }
+  #inset canvas { width:256px; height:192px; display:block; border-radius:6px; background:#0b0f19; }
+  .cap { color:var(--dim); font-size:12px; margin:0 0 4px 2px; }
+  .badge { display:inline-block; padding:2px 8px; border-radius:20px; background:#233152; color:var(--acc); font-weight:600; font-size:12px; letter-spacing:.4px; }
+  .chip { display:inline-block; margin-left:6px; padding:2px 10px; border-radius:20px; font-weight:700; font-size:13px; background:#2a3350; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; }
+  td { padding:2px 0; vertical-align:top; } td:first-child { color:var(--dim); width:104px; } td.v { font-variant-numeric:tabular-nums; }
+  h4 { margin:12px 0 6px; font-size:12px; text-transform:uppercase; letter-spacing:.8px; color:var(--dim); }
+  h4:first-child { margin-top:0; }
+  button { background:#22304f; color:var(--text); border:1px solid var(--line); border-radius:7px; padding:5px 9px; cursor:pointer; font:inherit; margin:0 4px 4px 0; }
+  button:hover { background:#2c3d63; } button.on { background:var(--acc); color:#06101f; border-color:var(--acc); font-weight:600; }
+  label.sl { display:block; margin:4px 0; } label.sl span { display:flex; justify-content:space-between; color:var(--dim); font-size:12px; }
+  input[type=range] { width:100%; } input[type=number] { width:62px; background:#0f1626; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:3px 5px; }
+  label.cb { display:block; margin:3px 0; color:var(--text); }
+  #msg { margin-top:8px; font-size:12.5px; color:var(--warn); min-height:16px; line-height:1.35; }
+  #banner { position:absolute; left:50%; top:12px; transform:translateX(-50%); background:#3a1d28; border:1px solid #7a2f45; color:#ffc2cf; padding:6px 14px; border-radius:20px; display:none; font-size:13px; }
+  .hint { color:var(--dim); font-size:12px; line-height:1.4; margin:6px 0 0; }
+</style>
+</head>
+<body>
+<canvas id="main"></canvas>
+<div id="banner"></div>
+
+<div id="hud" class="panel">
+  <div><span id="modeBadge" class="badge">MANUAL</span><span id="stateChip" class="chip">-</span></div>
+  <table id="hudTable"></table>
+  <div id="msg"></div>
+</div>
+
+<div id="ctl" class="panel">
+  <h4>Camera angle (drag the 3D view to orbit, wheel to zoom)</h4>
+  <button data-view="iso">Iso</button><button data-view="top">Top</button><button data-view="side">Side</button><button data-view="front">Front</button>
+
+  <h4>Show</h4>
+  <label class="cb"><input type="checkbox" id="cbReach" checked> Floor reach (green dots)</label>
+  <label class="cb"><input type="checkbox" id="cbFrustum" checked> Camera view cone</label>
+  <label class="cb"><input type="checkbox" id="cbTrail" checked> Gripper trail</label>
+  <button id="btnClear">Clear trail</button>
+
+  <div id="srcBox" style="display:none">
+    <h4>Who moves the arm?</h4>
+    <button id="srcServer" class="on">Server (demo / live camera)</button><button id="srcManual">Me (manual)</button>
+  </div>
+
+  <div id="manualBox">
+    <h4>Manual joints (forward kinematics)</h4>
+    <label class="sl"><span>M1 pan (deg)<b id="vPan">0</b></span><input type="range" id="sPan" min="-90" max="90" step="0.1" value="0"></label>
+    <label class="sl"><span>M2 shoulder (deg)<b id="vM2">80</b></span><input type="range" id="sM2" min="0" max="180" step="0.1" value="80"></label>
+    <label class="sl"><span>M3 elbow (deg)<b id="vM3">45</b></span><input type="range" id="sM3" min="0" max="180" step="0.1" value="45"></label>
+    <label class="sl"><span>S1 gripper (deg)<b id="vGrip">30</b></span><input type="range" id="sGrip" min="30" max="160" step="1" value="30"></label>
+    <h4>Aim the tip (inverse kinematics)</h4>
+    x <input type="number" id="tx" value="6" step="1"> y <input type="number" id="ty" value="24" step="1"> z <input type="number" id="tz" value="2.5" step="0.5"> cm
+    <div style="margin-top:6px"><button id="btnGo">Go to point</button><button id="btnHome">Home pose</button></div>
+    <p class="hint">Tip: click on the floor in the 3D view and the arm reaches for that spot (z = 2.5 cm, the middle of a 5 cm object).</p>
+  </div>
+  <p class="hint" id="legend">Blue cube = object. Green ring = where the controller thinks the object is. Red dot = raw camera measurement. Yellow ball = gripper tip.</p>
+</div>
+
+<div id="inset" class="panel"><div class="cap">What the arm's camera sees (320 x 240)</div><canvas id="cam" width="320" height="240"></canvas></div>
+
+<script>
+'use strict';
+/* ==========================================================================================
+   PART 1 - THE MATH (forward kinematics, inverse kinematics). Pure functions, no drawing.
+   This is a line-by-line copy of arm_model.py, so the 3D view and the Python simulation agree.
+   World frame: x = right, y = forward, z = up, all in centimetres, origin on the floor under the arm base.
+   ========================================================================================== */
+// ==KIN-BEGIN==
+const D2R = Math.PI / 180, R2D = 180 / Math.PI;
+const wrap180 = a => (((a + 180) % 360) + 360) % 360 - 180;
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+const mul = (a, s) => [a[0] * s, a[1] * s, a[2] * s];
+const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const len = a => Math.hypot(a[0], a[1], a[2]);
+const norm = a => { const l = len(a) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+
+// The numbers that describe your arm (the server sends the same values from designs.py).
+const DEFAULT_P = {
+  base_height: 10, m2_rise: 3.6, L2: 15.6, L3: 11.3, grip_reach: 8.5,
+  cam_along: 13.0, cam_perp: 9.3, cam_pitch_deg: 60,
+  m3_rel_at_mean_deg: -60, m3_dir: 1,
+  pan_lim: [-90, 90], th2_lim: [0, 180], th3_lim: [0, 180],
+  grip_open_deg: 30, grip_closed_deg: 160, min_joint_z: 1,
+  chassis: [-9, 9, -22, 6, 5]            // keep-out box: x0, x1, y0, y1, top height (a guess until you measure the car)
+};
+
+// A unit arrow inside the arm's "vertical page". phi = pan angle, alpha = how far it points above horizontal.
+function planeVec(phi, alpha) {
+  return [Math.cos(alpha) * Math.sin(phi), Math.cos(alpha) * Math.cos(phi), Math.sin(alpha)];
+}
+
+// FORWARD KINEMATICS: joint angles q = [pan, M2, M3] in degrees  ->  where every part of the arm is.
+function fk(q, P) {
+  const phi = q[0] * D2R;                                   // pan: spins the whole arm around the vertical axis
+  const a2 = q[1] * D2R;                                    // M2 arm angle above horizontal
+  const a3 = a2 + (P.m3_dir * (q[2] - 90) + P.m3_rel_at_mean_deg) * D2R;   // M3 arm angle above horizontal
+  const m1 = [0, 0, P.base_height];
+  const m2 = [0, 0, P.base_height + P.m2_rise];
+  const m3 = add(m2, mul(planeVec(phi, a2), P.L2));         // end of the first arm piece
+  const armDir = planeVec(phi, a3);                         // direction the second arm piece points
+  const s1 = add(m3, mul(armDir, P.L3));                    // gripper servo
+  const tcp = add(m3, mul(armDir, P.L3 + P.grip_reach));    // "tool centre point": middle of the grip zone
+  const nDir = planeVec(phi, a3 + Math.PI / 2);             // perpendicular to the arm piece (its "up")
+  const cam = add(add(m3, mul(armDir, P.cam_along)), mul(nDir, P.cam_perp));   // camera position
+  const pitch = P.cam_pitch_deg * D2R;
+  const fwd = sub(mul(armDir, Math.cos(pitch)), mul(nDir, Math.sin(pitch)));   // where the camera looks
+  const up = add(mul(armDir, Math.sin(pitch)), mul(nDir, Math.cos(pitch)));    // image "up"
+  const right = [Math.cos(phi), -Math.sin(phi), 0];                            // image "right"
+  return { m1, m2, m3, s1, tcp, cam, right, up, down: mul(up, -1), fwd, armDir, nDir, alpha3: a3 * R2D };
+}
+
+// Does any part of the arm pass through the (guessed) car body box?
+function collides(q, P, margin = 0.5) {
+  const [x0, x1, y0, y1, zt] = P.chassis;
+  const f = fk(q, P), chain = [f.m2, f.m3, f.s1, f.tcp], pts = [f.cam];
+  for (let i = 0; i < 3; i++) for (let k = 0; k < 12; k++) pts.push(add(chain[i], mul(sub(chain[i + 1], chain[i]), k / 11)));
+  return pts.some(p => p[0] >= x0 - margin && p[0] <= x1 + margin && p[1] >= y0 - margin && p[1] <= y1 + margin && p[2] <= zt + margin);
+}
+
+function withinLimits(q, P, tol = 1e-6) {
+  return q[0] >= P.pan_lim[0] - tol && q[0] <= P.pan_lim[1] + tol &&
+         q[1] >= P.th2_lim[0] - tol && q[1] <= P.th2_lim[1] + tol &&
+         q[2] >= P.th3_lim[0] - tol && q[2] <= P.th3_lim[1] + tol;
+}
+
+// INVERSE KINEMATICS: a point in space  ->  all joint angle sets that put the gripper tip exactly there.
+function ikAll(t, P) {
+  const [x, y, z] = t;
+  const phi0 = Math.atan2(x, y) * R2D, rad = Math.hypot(x, y);
+  let pan, r;
+  if (Math.abs(phi0) <= 90) { pan = phi0; r = rad; }                   // target in front: pan toward it
+  else { pan = phi0 - Math.sign(phi0) * 180; r = -rad; }               // target behind: pan the other way, reach backward
+  const dz = z - (P.base_height + P.m2_rise);                          // height of target above the shoulder
+  const D = Math.hypot(r, dz);                                         // straight-line distance shoulder -> target
+  const L1 = P.L2, Lt = P.L3 + P.grip_reach;
+  if (D > L1 + Lt - 1e-9 || D < Math.abs(L1 - Lt) + 1e-9 || D < 1e-9) return [];   // too far or too close
+  const c = clamp((D * D - L1 * L1 - Lt * Lt) / (2 * L1 * Lt), -1, 1);              // law of cosines
+  const sols = [];
+  for (const rel of [Math.acos(c), -Math.acos(c)]) {                   // two ways to bend the elbow
+    const a2 = Math.atan2(dz, r) - Math.atan2(Lt * Math.sin(rel), L1 + Lt * Math.cos(rel));
+    const th2 = wrap180(a2 * R2D);
+    const th3 = (rel * R2D - P.m3_rel_at_mean_deg) / P.m3_dir + 90;
+    const q = [pan, th2, th3];
+    if (!withinLimits(q, P)) continue;
+    const f = fk(q, P);
+    if (f.m3[2] < P.min_joint_z || f.s1[2] < P.min_joint_z || collides(q, P)) continue;
+    sols.push(q);
+  }
+  return sols;
+}
+function ik(t, P, qref) {
+  const sols = ikAll(t, P);
+  if (!sols.length) return null;
+  const ref = qref || [0, 90, 90];
+  const d = q => Math.hypot(q[0] - ref[0], q[1] - ref[1], q[2] - ref[2]);
+  return sols.reduce((best, q) => (d(q) < d(best) ? q : best));
+}
+// Plain-words reason why a target has no solution (for the on-screen message).
+function ikWhy(t, P) {
+  const r = Math.hypot(t[0], t[1]), dz = t[2] - (P.base_height + P.m2_rise), D = Math.hypot(r, dz);
+  const L1 = P.L2, Lt = P.L3 + P.grip_reach;
+  if (D > L1 + Lt) return 'too far: the arm reaches at most ' + (L1 + Lt).toFixed(1) + ' cm from the shoulder (this point is ' + D.toFixed(1) + ' cm away).';
+  if (D < Math.abs(L1 - Lt)) return 'too close to the shoulder: the arm cannot fold that tightly.';
+  return 'the maths has an answer, but it breaks a joint limit, goes below the floor, or hits the car body box.';
+}
+// ==KIN-END==
+
+/* ==========================================================================================
+   PART 2 - DRAWING 3D ON A FLAT SCREEN (no libraries).
+   A "camera" turns a 3D point into a screen pixel with the same pinhole formula the real camera uses:
+        pixel_x = cx + fx * X / Z        pixel_y = cy - fy * Y / Z
+   (X right, Y up, Z = distance in front of the camera). Shapes are drawn far-to-near ("painter's algorithm").
+   ========================================================================================== */
+function makeCam(pos, f, right, up, fx, fy, cx, cy) {
+  return {
+    pos, f, right, up, fx, fy, cx, cy,
+    toCam(p) { const v = sub(p, pos); return [dot(v, right), dot(v, up), dot(v, f)]; },
+    project(p) { const c = this.toCam(p); if (c[2] < 0.5) return null; return [cx + fx * c[0] / c[2], cy - fy * c[1] / c[2], c[2]]; },
+    ray(sx, sy) { return norm(add(f, add(mul(right, (sx - cx) / fx), mul(up, -(sy - cy) / fy)))); }
+  };
+}
+function orbitCam(view, W, H) {
+  const e = view.el * D2R, a = view.az * D2R, t = view.target;
+  const pos = [t[0] + view.dist * Math.cos(e) * Math.sin(a), t[1] - view.dist * Math.cos(e) * Math.cos(a), t[2] + view.dist * Math.sin(e)];
+  const f = norm(sub(t, pos)), right = norm(cross(f, [0, 0, 1])), up = cross(right, f);
+  const F = 0.5 * H / Math.tan(view.fov * D2R / 2);
+  return makeCam(pos, f, right, up, F, F, W / 2, H / 2);
+}
+function armCam(fkr, K) { return makeCam(fkr.cam, fkr.fwd, fkr.right, fkr.up, K.fx, K.fy, K.cx, K.cy); }
+
+const LIGHT = norm([-0.4, -0.55, 0.75]);
+function hexRGB(h) { return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)]; }
+function shade(hex, n) { const k = 0.5 + 0.5 * Math.abs(dot(n, LIGHT)), c = hexRGB(hex); return 'rgb(' + c.map(v => Math.round(clamp(v * (0.45 + 0.75 * k), 0, 255))).join(',') + ')'; }
+
+function Painter(cam) {
+  const prims = [];
+  return {
+    prims,
+    poly(pts, fill, alpha, stroke) {
+      const s = pts.map(p => cam.project(p)); if (s.some(p => !p)) return;
+      prims.push({ t: 'poly', d: s.reduce((a, p) => a + p[2], 0) / s.length, pts: s, fill, alpha: alpha == null ? 1 : alpha, stroke });
+    },
+    line(a, b, color, w, alpha, dash) {
+      let ca = cam.toCam(a), cb = cam.toCam(b); const N = 0.5;
+      if (ca[2] < N && cb[2] < N) return;
+      if (ca[2] < N) { const t = (N - ca[2]) / (cb[2] - ca[2]); ca = [ca[0] + t * (cb[0] - ca[0]), ca[1] + t * (cb[1] - ca[1]), N]; }
+      if (cb[2] < N) { const t = (N - cb[2]) / (ca[2] - cb[2]); cb = [cb[0] + t * (ca[0] - cb[0]), cb[1] + t * (ca[1] - cb[1]), N]; }
+      const pr = c => [cam.cx + cam.fx * c[0] / c[2], cam.cy - cam.fy * c[1] / c[2]];
+      prims.push({ t: 'line', d: (ca[2] + cb[2]) / 2 - 0.3, a: pr(ca), b: pr(cb), color, w: w || 1, alpha: alpha == null ? 1 : alpha, dash });
+    },
+    dot(p, rad, fill, alpha, stroke) {
+      const s = cam.project(p); if (!s) return;
+      prims.push({ t: 'dot', d: s[2] - 0.2, x: s[0], y: s[1], r: Math.max(1.5, rad * cam.fx / s[2]), fill, alpha: alpha == null ? 1 : alpha, stroke });
+    },
+    text(p, str, color, size) {
+      const s = cam.project(p); if (!s) return;
+      prims.push({ t: 'text', d: s[2] - 0.5, x: s[0], y: s[1], str, color, size: size || 12 });
+    },
+    flush(ctx) {
+      prims.sort((a, b) => b.d - a.d);
+      for (const q of prims) {
+        ctx.globalAlpha = q.alpha == null ? 1 : q.alpha;
+        if (q.t === 'poly') {
+          ctx.beginPath(); ctx.moveTo(q.pts[0][0], q.pts[0][1]);
+          for (let i = 1; i < q.pts.length; i++) ctx.lineTo(q.pts[i][0], q.pts[i][1]);
+          ctx.closePath(); ctx.fillStyle = q.fill; ctx.fill();
+          if (q.stroke) { ctx.strokeStyle = q.stroke; ctx.lineWidth = 1; ctx.stroke(); }
+        } else if (q.t === 'line') {
+          ctx.beginPath(); ctx.moveTo(q.a[0], q.a[1]); ctx.lineTo(q.b[0], q.b[1]);
+          ctx.strokeStyle = q.color; ctx.lineWidth = q.w; if (ctx.setLineDash) ctx.setLineDash(q.dash || []); ctx.stroke(); if (ctx.setLineDash) ctx.setLineDash([]);
+        } else if (q.t === 'dot') {
+          ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, 2 * Math.PI); ctx.fillStyle = q.fill; ctx.fill();
+          if (q.stroke) { ctx.strokeStyle = q.stroke; ctx.lineWidth = 1.5; ctx.stroke(); }
+        } else if (q.t === 'text') {
+          ctx.font = q.size + 'px system-ui, Arial'; ctx.fillStyle = q.color; ctx.textAlign = 'center'; ctx.fillText(q.str, q.x, q.y);
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+  };
+}
+
+// A box from its centre, three perpendicular unit axes and half-sizes. Returns 6 faces with their normals.
+function boxFaces(c, ax, ay, az, hx, hy, hz) {
+  const cs = [];
+  for (const sx of [-1, 1]) for (const sy of [-1, 1]) for (const sz of [-1, 1])
+    cs.push(add(add(add(c, mul(ax, sx * hx)), mul(ay, sy * hy)), mul(az, sz * hz)));
+  const F = [[[0, 1, 3, 2], mul(ax, -1)], [[4, 5, 7, 6], ax], [[0, 1, 5, 4], mul(ay, -1)], [[2, 3, 7, 6], ay], [[0, 2, 6, 4], mul(az, -1)], [[1, 3, 7, 5], az]];
+  return F.map(([idx, n]) => ({ pts: idx.map(i => cs[i]), n }));
+}
+function addBox(pt, c, ax, ay, az, hx, hy, hz, hex, alpha, stroke) {
+  for (const f of boxFaces(c, ax, ay, az, hx, hy, hz)) pt.poly(f.pts, shade(hex, f.n), alpha, stroke);
+}
+// A round tube between two points (a "cylinder" made of flat strips).
+function addTube(pt, p0, p1, r, hex, n) {
+  n = n || 10; const d = norm(sub(p1, p0));
+  const helper = Math.abs(d[2]) < 0.9 ? [0, 0, 1] : [1, 0, 0];
+  const e1 = norm(cross(d, helper)), e2 = cross(d, e1);
+  const ring = (p, a) => add(p, add(mul(e1, r * Math.cos(a)), mul(e2, r * Math.sin(a))));
+  for (let i = 0; i < n; i++) {
+    const a0 = 2 * Math.PI * i / n, a1 = 2 * Math.PI * (i + 1) / n, am = (a0 + a1) / 2;
+    pt.poly([ring(p0, a0), ring(p1, a0), ring(p1, a1), ring(p0, a1)], shade(hex, add(mul(e1, Math.cos(am)), mul(e2, Math.sin(am)))), 1);
+  }
+}
+
+/* ==========================================================================================
+   PART 3 - BUILD ONE PICTURE OF THE WORLD (floor, car, basket, arm, camera, object) for a given camera.
+   scene = { P, CFG, q, grip, obj, est, raw, attached, trail, floorDots }
+   opts  = { inset:true } draws only what a real camera could see.
+   ========================================================================================== */
+const COL = { floor: '#2b3552', chassis: '#7e8aa8', basket: '#c98b4a', servo: '#2f6fe0', link: '#d9b77c', sg90: '#303a52', jaw: '#e8ecf5',
+              obj: '#2d7dff', camBoard: '#46d38a', tcp: '#ffd34d', est: '#46d38a', raw: '#ff6b6b' };
+
+function buildPicture(pt, scene, opts) {
+  const { P, CFG, q, grip, obj, est, raw, attached, trail, floorDots } = scene, inset = !!(opts && opts.inset);
+  const f = fk(q, P), Z = [0, 0, 1];
+  const phi = q[0] * D2R, u = [Math.sin(phi), Math.cos(phi), 0], lat = f.right;
+
+  // floor grid (every 10 cm) and axes
+  for (let x = -50; x <= 50; x += 10) pt.line([x, -30, 0], [x, 60, 0], COL.floor, 1, 0.9);
+  for (let y = -30; y <= 60; y += 10) pt.line([-50, y, 0], [50, y, 0], COL.floor, 1, 0.9);
+  if (!inset) {
+    pt.line([0, 0, 0], [12, 0, 0], '#ff6b6b', 2); pt.line([0, 0, 0], [0, 12, 0], '#46d38a', 2); pt.line([0, 0, 0], [0, 0, 12], '#4da3ff', 2);
+    pt.text([14, 0, 0], 'x', '#ff6b6b', 12); pt.text([0, 14, 0], 'y (front)', '#46d38a', 12); pt.text([0, 0, 14], 'z', '#4da3ff', 12);
+    if (scene.showReach && floorDots) for (const d of floorDots) pt.dot([d[0], d[1], 0.1], 0.55, '#46d38a', 0.30);
+  }
+
+  // car body keep-out box and basket
+  const [x0, x1, y0, y1, zt] = P.chassis;
+  addBox(pt, [(x0 + x1) / 2, (y0 + y1) / 2, zt / 2], [1, 0, 0], [0, 1, 0], Z, (x1 - x0) / 2, (y1 - y0) / 2, zt / 2, COL.chassis, 0.35, '#9aa6c4');
+  const b = CFG.basket, rim = 10;
+  for (const [dx, dy, hx, hy] of [[-6, 0, 0.3, 6.3], [6, 0, 0.3, 6.3], [0, -6, 6.3, 0.3], [0, 6, 6.3, 0.3]])
+    addBox(pt, [b[0] + dx, b[1] + dy, (5 + rim) / 2], [1, 0, 0], [0, 1, 0], Z, hx, hy, (rim - 5) / 2, COL.basket, 1);
+  addBox(pt, [b[0], b[1], 5.3], [1, 0, 0], [0, 1, 0], Z, 6, 6, 0.3, COL.basket, 1);
+  if (!inset) pt.text([b[0], b[1], rim + 2], 'basket', '#e0b680', 12);
+
+  // the arm
+  const jawGap = 0.6 + 6.4 * (1 - clamp((grip - P.grip_open_deg) / (P.grip_closed_deg - P.grip_open_deg), 0, 1));
+  addBox(pt, [0, 0, 7.5], [1, 0, 0], [0, 1, 0], Z, 2.2, 3.0, 2.5, COL.servo, 1);                  // M1 servo (fixed to the car)
+  addTube(pt, f.m1, f.m2, 1.2, COL.link, 8);                                                      // column from M1 up to M2
+  addBox(pt, f.m2, lat, u, Z, 2.2, 2.9, 2.5, COL.servo, 1);                                       // M2 servo
+  addTube(pt, f.m2, f.m3, 1.1, COL.link, 10);                                                     // first arm piece
+  addBox(pt, f.m3, lat, u, Z, 2.2, 2.9, 2.5, COL.servo, 1);                                       // M3 servo
+  addTube(pt, f.m3, f.s1, 0.9, COL.link, 10);                                                     // second arm piece
+  addBox(pt, f.s1, lat, f.armDir, f.nDir, 1.2, 2.3, 1.3, COL.sg90, 1);                            // SG90 gripper servo
+  const jl0 = P.L3 + 1.0, jl1 = P.L3 + P.grip_reach + 1.5;                                        // jaws run along the arm
+  for (const s of [-1, 1]) {
+    const c = add(add(f.m3, mul(f.armDir, (jl0 + jl1) / 2)), mul(lat, s * jawGap / 2));
+    addBox(pt, c, lat, f.armDir, f.nDir, 0.35, (jl1 - jl0) / 2, 0.8, COL.jaw, 1);
+  }
+  if (!inset) {
+    pt.dot(f.tcp, 1.0, COL.tcp, 1, '#7a5f00');
+    addBox(pt, f.cam, f.right, f.fwd, f.up, 2.0, 0.6, 1.5, COL.camBoard, 1);                      // camera board
+    if (scene.showFrustum) {                                                                      // cone of what the camera sees
+      const K = CFG.K, dd = 24, hx = K.cx / K.fx * dd, hy = K.cy / K.fy * dd, c0 = add(f.cam, mul(f.fwd, dd));
+      const co = [[-1, -1], [1, -1], [1, 1], [-1, 1]].map(([sx, sy]) => add(c0, add(mul(f.right, sx * hx), mul(f.up, sy * hy))));
+      co.forEach((c, i) => { pt.line(f.cam, c, '#46d38a', 1, 0.5); pt.line(c, co[(i + 1) % 4], '#46d38a', 1, 0.6); });
+    }
+  }
+
+  // the object (blue cube), controller estimate, raw measurement, trail
+  if (obj) addBox(pt, attached ? f.tcp : obj, [1, 0, 0], [0, 1, 0], Z, 2.5, 2.5, 2.5, COL.obj, 1, '#9cc4ff');
+  if (!inset) {
+    if (est) { pt.dot(est, 1.6, 'rgba(0,0,0,0)', 1, COL.est); pt.line(add(est, [-2.5, 0, 0]), add(est, [2.5, 0, 0]), COL.est, 1.5, 0.9); pt.line(add(est, [0, -2.5, 0]), add(est, [0, 2.5, 0]), COL.est, 1.5, 0.9); }
+    if (raw) pt.dot(raw, 0.45, COL.raw, 0.9);
+    if (scene.showTrail && trail && trail.length > 1)
+      for (let i = 1; i < trail.length; i++) pt.line(trail[i - 1], trail[i], '#ffd34d', 1.5, 0.15 + 0.6 * i / trail.length);
+  }
+  return f;
+}
+
+function drawMain(ctx, W, H, view, scene) {
+  ctx.clearRect(0, 0, W, H);
+  const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#121a2e'); g.addColorStop(1, '#0b101c');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const cam = orbitCam(view, W, H), pt = Painter(cam);
+  const f = buildPicture(pt, scene, null); pt.flush(ctx);
+  return { cam, f, count: pt.prims.length };
+}
+function drawInset(ctx, W, H, scene) {
+  ctx.fillStyle = '#10182a'; ctx.fillRect(0, 0, W, H);
+  const f = fk(scene.q, scene.P), cam = armCam(f, scene.CFG.K), pt = Painter(cam);
+  buildPicture(pt, scene, { inset: true }); pt.flush(ctx);
+  ctx.strokeStyle = 'rgba(255,255,255,.25)'; ctx.lineWidth = 1;                                     // crosshair at the image centre
+  ctx.beginPath(); ctx.moveTo(W / 2 - 8, H / 2); ctx.lineTo(W / 2 + 8, H / 2); ctx.moveTo(W / 2, H / 2 - 8); ctx.lineTo(W / 2, H / 2 + 8); ctx.stroke();
+  return pt.prims.length;
+}
+function floorReachDots(P) {            // where on the floor can a 5 cm object be grasped? (uses the same inverse kinematics)
+  const out = [];
+  for (let x = -40; x <= 40; x += 2) for (let y = -10; y <= 40; y += 2) if (ik([x, y, 2.5], P)) out.push([x, y]);
+  return out;
+}
+
+if (typeof module !== 'undefined') module.exports = { fk, ik, ikAll, collides, DEFAULT_P, drawMain, drawInset, floorReachDots, orbitCam, makeCam, boxFaces };
+
+/* ==========================================================================================
+   PART 4 - THE WINDOW: buttons, sliders, reading the server, animation loop.
+   ========================================================================================== */
+if (typeof document !== 'undefined' && document.getElementById) (function () {
+  const $ = id => document.getElementById(id);
+  const cv = $('main'), ctx = cv.getContext('2d'), cam2 = $('cam'), ctx2 = cam2.getContext('2d');
+  let P = JSON.parse(JSON.stringify(DEFAULT_P));
+  let CFG = { basket: [-14, 12, 20], home: [0, 80, 45], K: { fx: 202.8, fy: 210.9, cx: 156.9, cy: 112.3, w: 320, h: 240 }, design: 'built-in', mode: 'manual' };
+  const view = { az: 32, el: 24, dist: 110, target: [0, 14, 14], fov: 45 };
+  const S = { q: [0, 80, 45], qT: [0, 80, 45], grip: 30, gripT: 30, obj: null, est: null, raw: null, attached: false, found: false, state: 'MANUAL', servo: null, trail: [], needCloser: false };
+  let useServer = false, serverUp = false, serverSeen = false, floorDots = [], lastHud = 0, dragMoved = 0;
+  const show = { reach: true, frustum: true, trail: true };
+
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    cv.width = Math.round(cv.clientWidth * dpr); cv.height = Math.round(cv.clientHeight * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  window.addEventListener('resize', resize); resize();
+
+  // ---- view buttons, mouse orbit / zoom
+  const VIEWS = { iso: [32, 24, 110], top: [0, 88, 120], side: [90, 8, 110], front: [0, 12, 110] };
+  document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { const v = VIEWS[b.dataset.view]; view.az = v[0]; view.el = v[1]; view.dist = v[2]; });
+  let drag = null;
+  cv.addEventListener('mousedown', e => { drag = { x: e.clientX, y: e.clientY }; dragMoved = 0; cv.classList.add('drag'); });
+  window.addEventListener('mouseup', e => { if (drag && dragMoved < 4) onFloorClick(e); drag = null; cv.classList.remove('drag'); });
+  window.addEventListener('mousemove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y; dragMoved += Math.abs(dx) + Math.abs(dy);
+    view.az -= dx * 0.4; view.el = clamp(view.el + dy * 0.4, 4, 88); drag = { x: e.clientX, y: e.clientY };
+  });
+  cv.addEventListener('wheel', e => { e.preventDefault(); view.dist = clamp(view.dist * (e.deltaY > 0 ? 1.08 : 0.92), 30, 300); }, { passive: false });
+
+  // ---- show / hide
+  $('cbReach').onchange = e => show.reach = e.target.checked;
+  $('cbFrustum').onchange = e => show.frustum = e.target.checked;
+  $('cbTrail').onchange = e => show.trail = e.target.checked;
+  $('btnClear').onclick = () => S.trail = [];
+
+  // ---- manual control
+  const sl = { pan: $('sPan'), m2: $('sM2'), m3: $('sM3'), grip: $('sGrip') };
+  function readSliders() { S.qT = [+sl.pan.value, +sl.m2.value, +sl.m3.value]; S.gripT = +sl.grip.value; $('vPan').textContent = sl.pan.value; $('vM2').textContent = sl.m2.value; $('vM3').textContent = sl.m3.value; $('vGrip').textContent = sl.grip.value; }
+  function setSliders(q, g) { sl.pan.value = q[0].toFixed(1); sl.m2.value = q[1].toFixed(1); sl.m3.value = q[2].toFixed(1); if (g != null) sl.grip.value = g; readSliders(); }
+  Object.values(sl).forEach(el => el.oninput = () => { msg(''); readSliders(); });
+  function msg(t) { $('msg').textContent = t || ''; }
+  function goTo(x, y, z) {
+    const t = [x, y, z], q = ik(t, P, S.qT);
+    if (!q) { msg('No arm pose reaches (' + x + ', ' + y + ', ' + z + '): ' + ikWhy(t, P)); return; }
+    msg(''); setSliders(q);
+  }
+  $('btnGo').onclick = () => goTo(+$('tx').value, +$('ty').value, +$('tz').value);
+  $('btnHome').onclick = () => { msg(''); setSliders(CFG.home, P.grip_open_deg); };
+  function onFloorClick(e) {
+    if (useServer) return;
+    const r = cv.getBoundingClientRect(), W = cv.clientWidth, H = cv.clientHeight;
+    const cam = orbitCam(view, W, H), d = cam.ray(e.clientX - r.left, e.clientY - r.top);
+    if (d[2] >= -1e-6) return;
+    const t = (2.5 - cam.pos[2]) / d[2], p = add(cam.pos, mul(d, t));
+    $('tx').value = p[0].toFixed(1); $('ty').value = p[1].toFixed(1); $('tz').value = '2.5';
+    goTo(+p[0].toFixed(1), +p[1].toFixed(1), 2.5);
+  }
+
+  // ---- source switch (only visible when the viewer was opened through viewer_server.py)
+  function setSource(server) {
+    useServer = server; $('srcServer').classList.toggle('on', server); $('srcManual').classList.toggle('on', !server);
+    $('manualBox').style.display = server ? 'none' : 'block';
+    if (!server) { S.state = 'MANUAL'; S.obj = S.est = S.raw = null; S.attached = false; setSliders(S.q, S.grip); S.gripT = S.grip; }
+  }
+  $('srcServer').onclick = () => setSource(true); $('srcManual').onclick = () => setSource(false);
+
+  // ---- talk to viewer_server.py (only when the page was opened from http://...)
+  async function init() {
+    if (!/^https?:/.test(location.protocol)) return;
+    try {
+      const c = await (await fetch('/config')).json();
+      P = Object.assign({}, DEFAULT_P, c.params); CFG = Object.assign(CFG, { basket: c.basket, home: c.home, K: c.K, design: c.design, mode: c.mode });
+      S.q = c.home.slice(); S.qT = c.home.slice(); S.grip = P.grip_open_deg; S.gripT = S.grip; setSliders(S.q, S.grip);
+      $('srcBox').style.display = 'block'; setSource(true); serverSeen = true; poll();
+    } catch (e) { /* opened without the server: manual mode only */ }
+  }
+  async function poll() {
+    try {
+      const s = await (await fetch('/state')).json(); serverUp = true;
+      if (useServer) {
+        S.q = s.q; S.grip = s.grip; S.state = s.state; S.found = s.found; S.obj = s.obj; S.est = s.est; S.raw = s.raw; S.attached = s.attached;
+        S.servo = s.servo; S.needCloser = s.need_closer; S.link = s.link; S.mode = s.mode;
+      }
+    } catch (e) { serverUp = false; }
+    setTimeout(poll, 33);
+  }
+
+  // ---- text panel
+  const f1 = v => v == null ? '-' : v.toFixed(1);
+  const xyz = p => p ? '(' + p.map(f1).join(', ') + ')' : '-';
+  const CHIP = { IDLE: '#3a4466', TRACK: '#1f6f4a', APPROACH: '#8a6a1c', DESCEND: '#8a6a1c', CLOSE: '#9a3b3b', TRANSFER: '#6a3f9a', RELEASE: '#6a3f9a', HOME: '#3a4466', MANUAL: '#2a3350' };
+  function hud(f) {
+    const mode = useServer ? ('SERVER: ' + (S.mode || CFG.mode)).toUpperCase() : 'MANUAL';
+    $('modeBadge').textContent = mode; $('stateChip').textContent = useServer ? S.state : 'hand control'; $('stateChip').style.background = CHIP[S.state] || '#2a3350';
+    const servo = [S.q[0] + 90, S.q[1], S.q[2], S.grip].map(v => v.toFixed(0)).join(' / ');
+    const rows = [['Joint angles', 'pan ' + f1(S.q[0]) + '  M2 ' + f1(S.q[1]) + '  M3 ' + f1(S.q[2])],
+                  ['Servo numbers', servo + '  (M1/M2/M3/S1, 0-180)'],
+                  ['Gripper tip', xyz(f.tcp) + ' cm'],
+                  ['Tip height', f1(f.tcp[2]) + ' cm above floor']];
+    if (useServer) rows.push(['Camera sees it?', S.found ? 'yes' : 'no'], ['Object (belief)', xyz(S.est) + ' cm']);
+    if (useServer && S.mode === 'demo') rows.push(['Object (truth)', xyz(S.obj) + ' cm']);
+    $('hudTable').innerHTML = rows.map(r => '<tr><td>' + r[0] + '</td><td class="v">' + r[1] + '</td></tr>').join('');
+    if (useServer) msg(!serverUp ? '' : S.needCloser ? 'Object is too far for the arm: the rover should move closer.' : '');
+    const ban = $('banner');
+    if (serverSeen && !serverUp) { ban.style.display = 'block'; ban.textContent = 'Lost connection to viewer_server.py'; }
+    else if (useServer && S.link && S.link !== 'ok') { ban.style.display = 'block'; ban.textContent = S.link; }
+    else ban.style.display = 'none';
+  }
+
+  // ---- animation loop
+  let tPrev = performance.now();
+  function frame(now) {
+    const dt = Math.min(0.1, (now - tPrev) / 1000); tPrev = now;
+    if (!useServer) {                                       // move smoothly toward the slider values at 90 degrees/second
+      for (let i = 0; i < 3; i++) S.q[i] += clamp(S.qT[i] - S.q[i], -90 * dt, 90 * dt);
+      S.grip += clamp(S.gripT - S.grip, -220 * dt, 220 * dt);
+    }
+    const scene = { P, CFG, q: S.q, grip: S.grip, obj: S.obj, est: S.est, raw: S.raw, attached: S.attached, trail: S.trail,
+                    floorDots, showReach: show.reach, showFrustum: show.frustum, showTrail: show.trail };
+    const r = drawMain(ctx, cv.clientWidth, cv.clientHeight, view, scene);
+    drawInset(ctx2, 320, 240, scene);
+    const tip = r.f.tcp, last = S.trail[S.trail.length - 1];
+    if (!last || len(sub(tip, last)) > 0.4) { S.trail.push(tip.slice()); if (S.trail.length > 220) S.trail.shift(); }
+    if (now - lastHud > 90) { hud(r.f); lastHud = now; }
+    requestAnimationFrame(frame);
+  }
+  floorDots = floorReachDots(P);
+  setSliders(S.q, S.grip);
+  init().then(() => { floorDots = floorReachDots(P); });
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

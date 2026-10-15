@@ -37,6 +37,9 @@ All of that is replaced by the files in this folder.
 | `calibrate_m3.py` | M3 direction / zero from three protractor readings |
 | `live_bridge.py` | feeds your real server `/latest` output (or a recorded log) through the controller in shadow mode |
 | `make_sample_log.py`, `test_bridge.py` | synthetic replay log and the bridge tests |
+| `HOW_IT_ALL_WORKS.md` | plain-language explanation: what runs, every plot, the FK/IK math, the 3D viewer |
+| `viewer/index.html`, `viewer_server.py` | the 3D viewer (manual, demo, live) and the server that feeds it |
+| `test_viewer.py`, `viewer/js_check.js` | checks that the viewer's math matches Python, plus server and demo tests |
 | `RUN_AND_COMMIT.md` | how to run everything on your PC and commit it to GitHub |
 | `test_model.py` | unit tests |
 
